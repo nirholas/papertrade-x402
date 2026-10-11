@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: "papertrade-x402"
+abstract: "Pay-per-call Papertrade intelligence API for AI agents over x402: liquidation risk, liquidation maps, settlement estimates and top-trader stats, paid in USDC on Solana or Base."
+license: Apache-2.0
+repository-code: "https://github.com/nirholas/papertrade-x402"
+url: "https://papertrade-x402.pages.dev"
+keywords: [papertrade, hyperliquid, hyperevm, perps, defi]
+authors:
+  - name: three.ws
+    website: "https://three.ws"

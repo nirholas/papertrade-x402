@@ -43,13 +43,23 @@
     "hyperevm",
     "perps",
     "ai-agents",
-    "pay-per-call"
+    "pay-per-call",
+    "base",
+    "agent-payments",
+    "micropayments",
+    "api-monetization",
+    "defi",
+    "typescript",
+    "cloudflare-pages",
+    "crypto",
+    "web3",
+    "agentic-commerce"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nirholas/papertrade-x402.git"
   },
-  "homepage": "https://github.com/nirholas/papertrade-x402#readme",
+  "homepage": "https://papertrade-x402.pages.dev",
   "bugs": {
     "url": "https://github.com/nirholas/papertrade-x402/issues"
   },
