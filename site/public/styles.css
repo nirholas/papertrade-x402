@@ -182,3 +182,21 @@ summary:hover { color: var(--accent); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 [hidden] { display: none !important; }
+
+.os-link { border: 1px solid var(--line); }
+.works { padding: 6px 0 18px; }
+.works p { margin: 0 0 8px; }
+.logos { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
+.logos li { font: 600 0.9rem var(--mono); padding: 6px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--muted); }
+.endpoint-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--surface); border: 1px solid var(--accent); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; position: relative; padding-right: 90px; }
+.endpoint-bar code { font-size: 1rem; font-weight: 600; }
+.tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+.tools h3 { margin: 0 0 8px; font-size: 1rem; }
+.plain-list { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.tools .card p { margin: 10px 0 0; }
+.result details pre { overflow-x: auto; }
+html[data-embed='1'] .marketing, html[data-embed='1'] .hero .lede, html[data-embed='1'] .hero .eyebrow, html[data-embed='1'] .os-link, html[data-embed='1'] .top nav, html[data-embed='1'] .hero .cta .btn:not(.keep) { display: none; }
+html[data-embed='1'] .hero { padding: 8px 0 10px; }
+html[data-embed='1'] h1 { font-size: 1.5rem; margin-bottom: 10px; }
+html[data-embed='1'] .top { padding: 10px 0; }
+html[data-embed='1'] body { background: transparent; }

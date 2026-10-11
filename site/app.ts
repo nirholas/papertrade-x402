@@ -2,6 +2,9 @@
 
 type Kind = 'ok' | 'warn' | 'bad' | 'wait';
 
+/* ?embed=1 shows just the product, for framing inside Papertrade OS. Set before first paint of the content below. */
+if (new URLSearchParams(location.search).get('embed') === '1') document.documentElement.dataset.embed = '1';
+
 interface Health {
   ok: boolean;
   upstream: { ok: boolean; indexedThroughBlock?: number; error?: string };
@@ -202,20 +205,31 @@ function syncFields() {
   });
 }
 
-function buildRequest(form: HTMLFormElement): { url: string; init: RequestInit; line: string } | { error: string; field: string } {
+interface Built {
+  url: string;
+  init: RequestInit;
+  line: string;
+  preview: boolean;
+  endpoint: string;
+}
+
+function buildRequest(form: HTMLFormElement): Built | { error: string; field: string } {
   const data = new FormData(form);
   const v = (k: string) => String(data.get(k) ?? '').trim();
-  switch (v('endpoint')) {
+  const preview = v('mode') === 'preview';
+  const base = preview ? '/api/v1/preview' : '/api/v1';
+  const endpoint = v('endpoint');
+  switch (endpoint) {
     case 'wallet-risk': {
       if (!ADDRESS_RE.test(v('address'))) return { error: 'Enter a 0x address with 40 hex characters.', field: 'try-address' };
-      const url = `/api/v1/wallet/${v('address')}/risk`;
-      return { url, init: {}, line: `GET ${url}` };
+      const url = `${base}/wallet/${v('address')}/risk`;
+      return { url, init: {}, line: `GET ${url}`, preview, endpoint };
     }
     case 'liquidations-nearby': {
       const pct = Number(v('pct'));
       if (!(pct > 0 && pct <= 25)) return { error: 'Window must be above 0 and at most 25.', field: 'try-pct' };
-      const url = `/api/v1/liquidations/nearby?market=${encodeURIComponent(v('market'))}&pct=${pct}`;
-      return { url, init: {}, line: `GET ${url}` };
+      const url = `${base}/liquidations/nearby?market=${encodeURIComponent(v('market'))}&pct=${pct}`;
+      return { url, init: {}, line: `GET ${url}`, preview, endpoint };
     }
     case 'estimate': {
       const marginUsd = Number(v('marginUsd'));
@@ -223,11 +237,11 @@ function buildRequest(form: HTMLFormElement): { url: string; init: RequestInit; 
       if (!(marginUsd > 0)) return { error: 'Margin must be a positive number.', field: 'try-margin' };
       if (!Number.isInteger(leverage) || leverage < 1 || leverage > 1000) return { error: 'Leverage must be a whole number from 1 to 1000.', field: 'try-leverage' };
       const body = { market: v('market'), side: v('side'), marginUsd, leverage };
-      return { url: '/api/v1/estimate', init: { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }, line: 'POST /api/v1/estimate' };
+      return { url: `${base}/estimate`, init: { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }, line: `POST ${base}/estimate`, preview, endpoint };
     }
     default: {
-      const url = `/api/v1/traders/top?window=${encodeURIComponent(v('window'))}`;
-      return { url, init: {}, line: `GET ${url}` };
+      const url = `${base}/traders/top?window=${encodeURIComponent(v('window'))}`;
+      return { url, init: {}, line: `GET ${url}`, preview, endpoint };
     }
   }
 }
@@ -257,6 +271,7 @@ async function sendUnpaid(form: HTMLFormElement) {
   send.disabled = true;
   send.textContent = 'Sending...';
   retry.hidden = true;
+  $('try-preview').hidden = true;
   result.hidden = false;
   const chip = $('try-status');
   chip.className = 'status-chip';
@@ -269,7 +284,26 @@ async function sendUnpaid(form: HTMLFormElement) {
     const res = await fetch(req.url, req.init);
     const header = res.headers.get('PAYMENT-REQUIRED');
     chip.textContent = `${res.status} ${res.statusText || ''}`.trim();
-    if (res.status === 402 && header) {
+    $<HTMLDetailsElement>('try-details').open = false;
+    if (req.preview) {
+      chip.classList.add(res.ok ? 'ok' : 'bad');
+      const text = await res.text();
+      let pretty = text;
+      try {
+        pretty = JSON.stringify(JSON.parse(text), null, 2);
+      } catch {
+        /* non-JSON body is shown as-is */
+      }
+      $('try-summary').textContent = 'Response body';
+      const details = $<HTMLDetailsElement>('try-details');
+      details.open = true;
+      $('try-json').textContent = pretty;
+      if (res.ok) $('try-note').textContent = 'Free preview: the same live computation as the paid route, with the paid detail withheld (see the preview.omitted field). Nothing was charged.';
+      else if (res.status === 429) $('try-note').textContent = `Preview rate limit reached. Try again in ${res.headers.get('Retry-After') ?? 'a few'} seconds.`;
+      else $('try-note').textContent = 'The preview request was rejected. Check the response body for the reason.';
+      if (!res.ok) retry.hidden = false;
+    } else if (res.status === 402 && header) {
+      $('try-summary').textContent = 'Decoded PAYMENT-REQUIRED header';
       const decoded = decodeHeader(header);
       $('try-note').textContent = 'Payment required, as expected. A paying client would sign one of these options and retry with a PAYMENT-SIGNATURE header. You were not charged.';
       $('try-accepts').replaceChildren(
@@ -296,9 +330,12 @@ async function sendUnpaid(form: HTMLFormElement) {
       } catch {
         /* non-JSON body is shown as-is */
       }
-      const note = res.status === 503 ? 'This deployment has no payment address configured, so paid routes are unavailable.' : res.status === 400 ? 'The request was rejected before any payment was asked for.' : 'The server answered without a payment challenge.';
+      const note = res.status === 503 ? 'Payments are not switched on yet: the operator has not set a payout address, so there is no 402 challenge to show. This is the real, explanatory response. The free preview returns live data now.' : res.status === 400 ? 'The request was rejected before any payment was asked for.' : 'The server answered without a payment challenge.';
       $('try-note').textContent = note;
+      $('try-summary').textContent = 'Response body';
+      $<HTMLDetailsElement>('try-details').open = true;
       $('try-json').textContent = pretty;
+      if (res.status === 503) $('try-preview').hidden = false;
       chip.classList.toggle('ok', res.status < 400);
     }
   } catch (e) {
@@ -308,8 +345,12 @@ async function sendUnpaid(form: HTMLFormElement) {
     retry.hidden = false;
   } finally {
     send.disabled = false;
-    send.textContent = 'Send unpaid request';
+    send.textContent = $<HTMLSelectElement>('try-mode').value === 'preview' ? 'Send free preview request' : 'Send unpaid request';
   }
+}
+
+function syncMode() {
+  $('try-send').textContent = $<HTMLSelectElement>('try-mode').value === 'preview' ? 'Send free preview request' : 'Send unpaid request';
 }
 
 /* Copy buttons */
@@ -345,6 +386,12 @@ function init() {
     void sendUnpaid(form);
   });
   $('try-retry').addEventListener('click', () => void sendUnpaid(form));
+  $('try-preview').addEventListener('click', () => {
+    $<HTMLSelectElement>('try-mode').value = 'preview';
+    syncMode();
+    void sendUnpaid(form);
+  });
+  $('try-mode').addEventListener('change', syncMode);
   syncFields();
   wireCopy();
   void loadStatus();

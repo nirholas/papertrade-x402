@@ -14,6 +14,8 @@
   <meta name="color-scheme" content="dark light">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
   <link rel="alternate" type="application/json" href="/openapi.json" title="OpenAPI">
+  <link rel="api-catalog" type="application/linkset+json" href="/.well-known/api-catalog">
+  <link rel="alternate" type="application/json" href="/.well-known/mcp/server-card.json" title="MCP server card">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffb000'/%3E%3Cpath d='M8 11h16M8 16h16M8 21h9' stroke='%231a1206' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
@@ -27,10 +29,11 @@
     <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>papertrade-x402</a>
     <nav aria-label="Primary">
       <a href="#catalog">Endpoints</a>
-      <a href="#try">Try the 402</a>
-      <a href="#client">Client</a>
-      <a href="#agents">Agents</a>
+      <a href="#try">Try it</a>
+      <a href="#connect">Connect your AI</a>
+      <a href="/docs/">Docs</a>
       <a href="https://github.com/nirholas/papertrade-x402">GitHub</a>
+      <a class="os-link" href="https://papertrade-os.pages.dev/?open=x402" rel="noopener">Open in Papertrade OS</a>
     </nav>
   </header>
 
@@ -38,7 +41,7 @@
     <section class="hero">
       <p class="eyebrow">x402 · USDC · Solana first</p>
       <h1>Pay per call.<br>Papertrade intelligence for agents.</h1>
-      <p class="lede">Liquidation risk for any wallet, a live liquidation map, settlement estimates and top-trader stats, computed from live Papertrade data. No API keys and no accounts. Your agent gets an HTTP 402, signs a USDC payment, and gets the answer.</p>
+      <p class="lede">Liquidation risk for any wallet, a live liquidation map, settlement estimates and top-trader stats, computed from live Papertrade data. No API keys and no accounts. Start with the free preview, connect your AI over MCP, or let your agent take an HTTP 402, sign a USDC payment and get the full answer.</p>
       <p class="disclaimer"><strong>Unofficial, not affiliated with Papertrade.</strong> High leverage can lose your whole margin. Nothing here is financial advice.</p>
       <ul class="pills" aria-label="Service status">
         <li class="pill" data-kind="wait" id="pill-api"><span class="dot"></span><span class="pill-text">Papertrade API: checking</span></li>
@@ -47,10 +50,19 @@
         <li class="pill" data-kind="wait" id="pill-base"><span class="dot"></span><span class="pill-text">Base USDC</span></li>
       </ul>
       <div class="cta">
-        <a class="btn primary" href="#try">Try an unpaid call</a>
-        <a class="btn" href="#client">Use the client</a>
-        <button id="retry-status" class="btn" type="button" hidden>Retry status</button>
+        <a class="btn primary" href="#try">Try it live</a>
+        <a class="btn" href="#connect">Connect your AI</a>
+        <a class="btn" href="/docs/">Read the docs</a>
+        <button id="retry-status" class="btn keep" type="button" hidden>Retry status</button>
       </div>
+    </section>
+
+    <section aria-labelledby="works-h" class="works marketing">
+      <h2 id="works-h" class="vh">Works with</h2>
+      <p class="muted small">Works with</p>
+      <ul class="logos">
+        <li>Claude</li><li>Codex</li><li>ChatGPT</li><li>Gemini</li><li>Cursor</li><li>VS Code</li><li>Windsurf</li><li>Zed</li>
+      </ul>
     </section>
 
     <section aria-labelledby="markets-h" class="block">
@@ -75,13 +87,20 @@
         <p id="catalog-error-text"></p>
         <button id="catalog-retry" class="btn" type="button">Retry</button>
       </div>
-      <p id="not-configured" class="notice warn" role="status" hidden><strong>Not configured.</strong> This deployment has no payment address yet (<code>X402_SOLANA_PAY_TO</code> / <code>X402_BASE_PAY_TO</code>), so paid endpoints answer <code>503</code>. See the <a href="https://github.com/nirholas/papertrade-x402#environment-variables">environment variables</a>.</p>
+      <p id="not-configured" class="notice warn" role="status" hidden><strong>Payments are not switched on yet.</strong> The operator has not set a payout address, so paid endpoints answer an explanatory <code>503</code> instead of a payment challenge. Every endpoint has a free live preview below, and the MCP server works now. Operators: <a href="/docs/self-hosting/">set <code>X402_SOLANA_PAY_TO</code></a>.</p>
       <p class="muted small">Free: <a href="/api/v1/health">/api/v1/health</a>, <a href="/api/v1/markets">/api/v1/markets</a>, <a href="/openapi.json">/openapi.json</a>, <a href="/.well-known/x402">/.well-known/x402</a>.</p>
     </section>
 
     <section id="try" aria-labelledby="try-h" class="block">
-      <div class="head"><h2 id="try-h">See the 402 challenge</h2><span class="muted">Sends one request with no payment. Nothing is signed or charged.</span></div>
+      <div class="head"><h2 id="try-h">Try it live</h2><span class="muted">Sends one real request. Nothing is signed or charged.</span></div>
       <form id="try-form" class="try" novalidate>
+        <div class="field">
+          <label for="try-mode">Request</label>
+          <select id="try-mode" name="mode">
+            <option value="challenge">Paid route, no payment (402 challenge)</option>
+            <option value="preview">Free preview (live data)</option>
+          </select>
+        </div>
         <div class="field">
           <label for="try-endpoint">Endpoint</label>
           <select id="try-endpoint" name="endpoint">
@@ -128,12 +147,62 @@
         <div class="result-head"><span id="try-status" class="status-chip"></span><code id="try-line"></code></div>
         <p id="try-note" class="muted"></p>
         <div id="try-accepts" class="accepts"></div>
-        <details><summary>Decoded PAYMENT-REQUIRED header</summary><pre><code id="try-json"></code></pre></details>
-        <button id="try-retry" class="btn" type="button" hidden>Retry</button>
+        <details id="try-details"><summary id="try-summary">Decoded PAYMENT-REQUIRED header</summary><pre><code id="try-json"></code></pre></details>
+        <div class="cta">
+          <button id="try-preview" class="btn primary" type="button" hidden>Show the free preview instead</button>
+          <button id="try-retry" class="btn" type="button" hidden>Retry</button>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="curl-h" class="block">
+    <section id="connect" aria-labelledby="connect-h" class="block marketing">
+      <div class="head"><h2 id="connect-h">Connect your AI</h2><span class="muted">One URL. Read-only tools. Connecting cannot spend money.</span></div>
+      <div class="endpoint-bar">
+        <code id="mcp-url">https://papertrade-x402.pages.dev/mcp</code>
+        <button class="copy" type="button" data-copy="mcp-url" aria-label="Copy MCP endpoint URL">Copy</button>
+      </div>
+      <div class="two">
+        <div class="code">
+          <span class="code-title">Claude Code</span>
+          <button class="copy" type="button" data-copy="c-claude" aria-label="Copy Claude Code command">Copy</button>
+<pre><code id="c-claude">claude mcp add --transport http papertrade-x402 https://papertrade-x402.pages.dev/mcp</code></pre>
+        </div>
+        <div class="code">
+          <span class="code-title">Codex CLI</span>
+          <button class="copy" type="button" data-copy="c-codex" aria-label="Copy Codex command">Copy</button>
+<pre><code id="c-codex">codex mcp add papertrade-x402 --url https://papertrade-x402.pages.dev/mcp</code></pre>
+        </div>
+        <div class="code">
+          <span class="code-title">Cursor: .cursor/mcp.json</span>
+          <button class="copy" type="button" data-copy="c-cursor" aria-label="Copy Cursor config">Copy</button>
+<pre><code id="c-cursor">{
+  "mcpServers": {
+    "papertrade-x402": { "url": "https://papertrade-x402.pages.dev/mcp" }
+  }
+}</code></pre>
+        </div>
+        <div class="code">
+          <span class="code-title">Gemini CLI: settings.json</span>
+          <button class="copy" type="button" data-copy="c-gemini" aria-label="Copy Gemini CLI config">Copy</button>
+<pre><code id="c-gemini">{
+  "mcpServers": {
+    "papertrade-x402": { "httpUrl": "https://papertrade-x402.pages.dev/mcp" }
+  }
+}</code></pre>
+        </div>
+      </div>
+      <p class="muted small">Claude Desktop and claude.ai: add a custom connector with the URL above. ChatGPT: developer mode connector. VS Code, Windsurf, Zed, Cline, Goose, Continue and the Claude and OpenAI APIs: <a href="/docs/connect-your-ai/">full setup guide</a>.</p>
+    </section>
+
+    <section id="mcp" aria-labelledby="mcp-h" class="block marketing">
+      <div class="head"><h2 id="mcp-h">MCP tools</h2><a href="/docs/mcp/">Schemas and examples</a></div>
+      <div class="tools">
+        <div class="card"><h3>Free</h3><ul class="plain-list"><li><code>get_markets</code></li><li><code>get_service_status</code></li><li><code>preview_wallet_risk</code></li><li><code>preview_liquidations_nearby</code></li><li><code>preview_estimate_position</code></li><li><code>preview_top_traders</code></li></ul></div>
+        <div class="card"><h3>Paid, requirements only</h3><ul class="plain-list"><li><code>wallet_risk</code></li><li><code>liquidations_nearby</code></li><li><code>estimate_position</code></li><li><code>top_traders</code></li></ul><p class="muted small">These return the x402 payment requirements and never pay. Your agent pays with its own wallet over HTTP: <a href="/docs/paying-as-an-agent/">how</a>.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="curl-h" class="block marketing">
       <div class="head"><h2 id="curl-h">curl</h2><span class="muted">Every paid route answers an unpaid request with a spec-correct 402.</span></div>
       <div class="code">
         <button class="copy" type="button" data-copy="curl-code" aria-label="Copy curl example">Copy</button>
@@ -153,7 +222,7 @@ curl -i -X POST https://papertrade-x402.pages.dev/api/v1/estimate \
       </div>
     </section>
 
-    <section id="client" aria-labelledby="client-h" class="block">
+    <section id="client" aria-labelledby="client-h" class="block marketing">
       <div class="head"><h2 id="client-h">TypeScript client</h2><span class="muted">Example. You supply the signer; keys never leave your process.</span></div>
       <div class="two">
         <div class="code">
@@ -194,19 +263,20 @@ const { data, receipt } = await api.tradersTop({ window: '7d' });</code></pre>
       </div>
     </section>
 
-    <section id="agents" aria-labelledby="agents-h" class="block">
+    <section id="agents" aria-labelledby="agents-h" class="block marketing">
       <div class="head"><h2 id="agents-h">Agent quick start</h2></div>
       <ol class="steps">
-        <li><strong>Discover.</strong> Fetch <a href="/.well-known/x402"><code>/.well-known/x402</code></a> or <a href="/openapi.json"><code>/openapi.json</code></a> for prices, networks, payTo and input/output schemas.</li>
+        <li><strong>Discover.</strong> Fetch <a href="/.well-known/x402"><code>/.well-known/x402</code></a>, <a href="/openapi.json"><code>/openapi.json</code></a> or the <a href="/.well-known/mcp/server-card.json">MCP server card</a> for prices, networks, payTo and input/output schemas. Check <code>status</code> first.</li>
         <li><strong>Call.</strong> Request any paid route. You get <code>402</code> and a base64 <code>PAYMENT-REQUIRED</code> header listing Solana USDC first, then Base USDC.</li>
         <li><strong>Pay.</strong> Sign the matching option and retry with the <code>PAYMENT-SIGNATURE</code> header. The x402 fetch wrapper does both steps for you.</li>
         <li><strong>Receive.</strong> The facilitator verifies before the handler runs and settles only after a successful response. Errors (<code>400</code>, <code>502</code>) are never charged. The receipt is in <code>PAYMENT-RESPONSE</code>.</li>
+        <li><strong>Preview first.</strong> Every paid route has a free live preview under <code>/api/v1/preview/</code>.</li>
         <li><strong>Pair it.</strong> Use <a href="https://github.com/nirholas/papertrade-ai">papertrade-ai</a> (MCP server and CLI) for the trading side and this API for paid intelligence.</li>
       </ol>
     </section>
   </main>
 
-  <footer class="foot">
+  <footer class="foot marketing">
     <p class="disclaimer"><strong>Unofficial, not affiliated with Papertrade.</strong> High leverage can lose your whole margin. Data is read live from the public Papertrade API and may be delayed or unavailable.</p>
     <nav aria-label="Related projects" class="related">
       <span>Related:</span>
@@ -220,7 +290,7 @@ const { data, receipt } = await api.tradersTop({ window: '7d' });</code></pre>
       <a href="https://github.com/nirholas/papertrade-alerts">alerts</a>
       <a href="https://papertrade-copytrade.pages.dev">copytrade</a>
     </nav>
-    <p class="muted small">Apache-2.0 · <a href="https://github.com/nirholas/papertrade-x402">github.com/nirholas/papertrade-x402</a> · <a href="/llms.txt">llms.txt</a></p>
+    <p class="muted small">Apache-2.0 · <a href="https://github.com/nirholas/papertrade-x402">github.com/nirholas/papertrade-x402</a> · <a href="/docs/">Docs</a> · <a href="/mcp">MCP</a> · <a href="/llms.txt">llms.txt</a> · <a href="/openapi.json">OpenAPI</a></p>
   </footer>
 </body>
 </html>
