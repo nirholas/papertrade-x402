@@ -1,15 +1,8 @@
 import { activeNetworks, VERSION, type ResolvedConfig } from './config.js';
 import { PAID_ENDPOINTS } from './endpoints.js';
-
-const USDC: Record<string, { symbol: 'USDC'; address: string; decimals: 6 }> = {
-  'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': { symbol: 'USDC', address: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', decimals: 6 },
-  'eip155:8453': { symbol: 'USDC', address: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', decimals: 6 },
-};
-
-const toAtomic = (price: string): string => {
-  const [whole, frac = ''] = price.split('.');
-  return (BigInt(whole) * 1_000_000n + BigInt(frac.padEnd(6, '0'))).toString();
-};
+import { PREVIEW } from './preview.js';
+import { toAtomic, USDC } from './payment.js';
+import { discoveryFor } from './x402.js';
 
 /**
  * Discovery document served at /.well-known/x402.
@@ -30,6 +23,10 @@ export function buildDiscovery(config: ResolvedConfig, origin: string) {
     serviceVersion: VERSION,
     facilitator: config.facilitatorUrl,
     configured: active.length > 0,
+    status: active.length > 0 ? 'accepting_payments' : 'payments_not_configured',
+    ...(active.length > 0
+      ? {}
+      : { statusNote: 'The operator has not set a payout address yet, so paid routes answer 503 and accepts is empty. Free preview routes, the MCP server and these schemas work now.' }),
     networks: config.networks.map((n) => ({ network: n.network, label: n.label, payTo: n.configured ? n.payTo : null, configured: n.configured })),
     resources: PAID_ENDPOINTS.map((e) => `${base}${e.path.replace('{address}', ':address')}`),
     instructions: `Call a resource without payment to receive HTTP 402 with a base64 PAYMENT-REQUIRED header. Sign the payment for one of the accepts entries and retry with the PAYMENT-SIGNATURE header. The payment settles only after a successful (2xx) response. Free endpoints: ${base}/api/v1/health, ${base}/api/v1/markets, ${base}/openapi.json.`,
@@ -49,13 +46,17 @@ export function buildDiscovery(config: ResolvedConfig, origin: string) {
       })),
       mimeType: 'application/json',
       input: { type: 'http', method: e.method, ...(e.bodyType ? { bodyType: e.bodyType } : {}), schema: e.inputSchema, example: e.inputExample },
-      output: { type: 'json', schema: e.outputSchema },
+      output: { type: 'json', schema: e.outputSchema, example: e.outputExample },
+      extensions: discoveryFor(e),
+      preview: { method: PREVIEW[e.id].method, resource: `${base}${PREVIEW[e.id].path}`, omits: PREVIEW[e.id].omits },
       tags: e.tags,
     })),
     free: [
       { method: 'GET', resource: `${base}/api/v1/health` },
       { method: 'GET', resource: `${base}/api/v1/markets` },
       { method: 'GET', resource: `${base}/openapi.json` },
+      ...PAID_ENDPOINTS.map((e) => ({ method: PREVIEW[e.id].method, resource: `${base}${PREVIEW[e.id].path}`, preview: true })),
     ],
+    mcp: `${base}/mcp`,
   };
 }

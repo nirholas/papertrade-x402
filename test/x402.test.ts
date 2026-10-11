@@ -11,7 +11,7 @@ import { resolveConfig } from '../src/config.js';
 
 const SOL = '3WcepPag9Q9xsAAWsGBhBPdEmMeM3qnaR8u9FGNmTgXk';
 const EVM = '0x07977F60757bad9992aFB99A57d83449B69cBC02';
-const ADDR = '0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd';
+const ADDR = '0x3f139ef9f371fbbfc299aa65b93534e177141b18';
 const env: Env = { X402_SOLANA_PAY_TO: SOL, X402_BASE_PAY_TO: EVM, PRICE_WALLET_RISK: '0.02', PRICE_LIQUIDATIONS_NEARBY: '0.05', PRICE_ESTIMATE: '0.005', PRICE_TRADERS_TOP: '0.03' };
 const app = createApp();
 const call = (path: string, init?: RequestInit, e: Env = env) => app.fetch(new Request(`https://x402.test${path}`, init), e);
@@ -173,7 +173,7 @@ describe('discovery and OpenAPI', () => {
     const o = (await (await call('/openapi.json')).json()) as { openapi: string; paths: Record<string, unknown> };
     expect(o.openapi).toBe('3.1.0');
     expect(Object.keys(o.paths)).toContain('/api/v1/wallet/{address}/risk');
-    expect(Object.keys(buildOpenApi(config, 'https://x').paths)).toHaveLength(6);
+    expect(Object.keys(buildOpenApi(config, 'https://x').paths)).toHaveLength(11);
   });
 
   it('never invents an address when payTo is unset', () => {

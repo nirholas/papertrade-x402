@@ -6,12 +6,12 @@ import { paymentMiddleware } from '@x402/hono';
 import type { MiddlewareHandler } from 'hono';
 import { SOLANA_MAINNET, activeNetworks, type ResolvedConfig } from './config.js';
 import { PAID_ENDPOINTS, type PaidEndpoint } from './endpoints.js';
+import { MAX_TIMEOUT_SECONDS } from './payment.js';
 
-const MAX_TIMEOUT_SECONDS = 90;
 
 /** Bazaar discovery metadata for one endpoint, so facilitators can catalog it. */
-function discoveryFor(e: PaidEndpoint) {
-  const output = { schema: e.outputSchema };
+export function discoveryFor(e: PaidEndpoint) {
+  const output = { example: e.outputExample, schema: e.outputSchema };
   if (e.method === 'POST') {
     return declareDiscoveryExtension({ bodyType: 'json', input: e.inputExample, inputSchema: e.inputSchema, output });
   }

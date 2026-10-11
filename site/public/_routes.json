@@ -1,5 +1,15 @@
 {
   "version": 1,
-  "include": ["/api/*", "/openapi.json", "/.well-known/x402"],
+  "include": [
+    "/api/*",
+    "/mcp",
+    "/openapi.json",
+    "/.well-known/x402",
+    "/.well-known/mcp.json",
+    "/.well-known/mcp/server-card.json",
+    "/.well-known/agent-card.json",
+    "/.well-known/agent.json",
+    "/.well-known/api-catalog"
+  ],
   "exclude": []
 }

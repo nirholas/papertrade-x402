@@ -1,4 +1,5 @@
 import type { EndpointId } from './config.js';
+import recorded from './examples.json';
 
 type Schema = Record<string, unknown>;
 
@@ -20,14 +21,19 @@ export interface PaidEndpoint {
   curlExample: string;
   bodyType?: 'json';
   outputSchema: Schema;
+  /** A real response computed from a recorded live Papertrade snapshot, arrays shortened. */
+  outputExample: Record<string, unknown>;
 }
 
 const num = { type: 'number' };
 const str = { type: 'string' };
 
+const examples = recorded.examples as Record<EndpointId, Record<string, unknown>>;
+
 export const PAID_ENDPOINTS: PaidEndpoint[] = [
   {
     id: 'wallet-risk',
+    outputExample: examples['wallet-risk'],
     method: 'GET',
     path: '/api/v1/wallet/{address}/risk',
     routePattern: 'GET /api/v1/wallet/:address/risk',
@@ -40,8 +46,8 @@ export const PAID_ENDPOINTS: PaidEndpoint[] = [
       properties: { address: { type: 'string', pattern: '^0x[0-9a-fA-F]{40}$', description: 'HyperEVM wallet address of the Papertrade trader' } },
       required: ['address'],
     },
-    inputExample: { address: '0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd' },
-    curlExample: '/api/v1/wallet/0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd/risk',
+    inputExample: { address: '0x3f139ef9f371fbbfc299aa65b93534e177141b18' },
+    curlExample: '/api/v1/wallet/0x3f139ef9f371fbbfc299aa65b93534e177141b18/risk',
     outputSchema: {
       type: 'object',
       properties: {
@@ -61,6 +67,7 @@ export const PAID_ENDPOINTS: PaidEndpoint[] = [
   },
   {
     id: 'liquidations-nearby',
+    outputExample: examples['liquidations-nearby'],
     method: 'GET',
     path: '/api/v1/liquidations/nearby',
     routePattern: 'GET /api/v1/liquidations/nearby',
@@ -93,6 +100,7 @@ export const PAID_ENDPOINTS: PaidEndpoint[] = [
   },
   {
     id: 'estimate',
+    outputExample: examples['estimate'],
     method: 'POST',
     path: '/api/v1/estimate',
     routePattern: 'POST /api/v1/estimate',
@@ -132,6 +140,7 @@ export const PAID_ENDPOINTS: PaidEndpoint[] = [
   },
   {
     id: 'traders-top',
+    outputExample: examples['traders-top'],
     method: 'GET',
     path: '/api/v1/traders/top',
     routePattern: 'GET /api/v1/traders/top',

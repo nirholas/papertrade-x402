@@ -1,0 +1,264 @@
+{
+  "recordedAt": "2026-10-10T20:52:30.348Z",
+  "note": "Real responses computed from a recorded live Papertrade snapshot. Arrays are shortened.",
+  "examples": {
+    "wallet-risk": {
+      "wallet": "0x3f139ef9f371fbbfc299aa65b93534e177141b18",
+      "asOf": "2026-10-10T20:52:30.348Z",
+      "balanceUsd": 6697.96,
+      "availableBalanceUsd": 6697.96,
+      "summary": {
+        "openPositions": 11,
+        "totalMarginUsd": 764032,
+        "totalNotionalUsd": 103990300,
+        "unrealizedPnlUsd": 483.52,
+        "accountEffectiveLeverage": 14480.34,
+        "maxRiskScore": 97,
+        "maxRiskBand": "critical",
+        "nearestBustDistancePct": 0.2975,
+        "marginAtRiskUsd": 764032
+      },
+      "positions": [
+        {
+          "positionId": "52653",
+          "market": "BTC",
+          "side": "short",
+          "leverage": 300,
+          "entryPrice": 83046.5,
+          "bustPrice": 83283.7,
+          "marginUsd": 13800,
+          "notionalUsd": 4140000,
+          "openedAt": "2026-10-10T19:59:09.000Z",
+          "ageSeconds": 3201,
+          "markPrice": 83036.71659099,
+          "bustDistancePct": 0.2975,
+          "riskScore": 97,
+          "riskBand": "critical",
+          "unrealizedPnlUsd": 488.55,
+          "pnlPctOfMargin": 3.54,
+          "effectiveLeverage": 289.74,
+          "estimatedCloseNetUsd": 123.54,
+          "pastBustPrice": false
+        },
+        {
+          "positionId": "53523",
+          "market": "BTC",
+          "side": "long",
+          "leverage": 145,
+          "entryPrice": 83065.5,
+          "bustPrice": 82531.9,
+          "marginUsd": 68500,
+          "notionalUsd": 9932500,
+          "openedAt": "2026-10-10T20:03:17.000Z",
+          "ageSeconds": 2953,
+          "markPrice": 83036.71659099,
+          "bustDistancePct": 0.6079,
+          "riskScore": 94,
+          "riskBand": "critical",
+          "unrealizedPnlUsd": -3443.74,
+          "pnlPctOfMargin": -5.03,
+          "effectiveLeverage": 152.68,
+          "estimatedCloseNetUsd": -3443.74,
+          "pastBustPrice": false
+        }
+      ],
+      "method": "bustDistancePct = distance from mark to bust price as % of mark; riskScore = 100 * max(0, 1 - distance/10%); effectiveLeverage = notional / (margin + unrealized PnL); bust prices are the protocol values from the live wallet state."
+    },
+    "liquidations-nearby": {
+      "asOf": "2026-10-10T20:52:30.348Z",
+      "market": "BTC",
+      "markPrice": 83036.71659099,
+      "window": {
+        "pct": 0.5,
+        "low": 82621.533,
+        "high": 83451.9002
+      },
+      "scanned": {
+        "source": "open positions of the top leaderboard accounts by open notional (24h window)",
+        "accounts": 12,
+        "accountsRequested": 12,
+        "partial": false,
+        "positionsInMarket": 54,
+        "positionsInWindow": 36
+      },
+      "totals": {
+        "longs": {
+          "count": 18,
+          "notionalUsd": 116548000,
+          "marginUsd": 382000
+        },
+        "shorts": {
+          "count": 18,
+          "notionalUsd": 115688000,
+          "marginUsd": 385800
+        }
+      },
+      "buckets": [
+        {
+          "from": 82621.533,
+          "to": 82663.0514,
+          "longNotionalUsd": 0,
+          "shortNotionalUsd": 0,
+          "longCount": 0,
+          "shortCount": 0
+        },
+        {
+          "from": 82663.0514,
+          "to": 82704.5697,
+          "longNotionalUsd": 0,
+          "shortNotionalUsd": 0,
+          "longCount": 0,
+          "shortCount": 0
+        }
+      ],
+      "nearest": [
+        {
+          "wallet": "0x4e76d59aa67230b12315251c9f453d4f7450142e",
+          "positionId": "61902",
+          "side": "short",
+          "leverage": 500,
+          "bustPrice": 83162.9,
+          "bustDistancePct": 0.152,
+          "marginUsd": 10000,
+          "notionalUsd": 5000000
+        },
+        {
+          "wallet": "0x4e76d59aa67230b12315251c9f453d4f7450142e",
+          "positionId": "61896",
+          "side": "short",
+          "leverage": 500,
+          "bustPrice": 83162.9,
+          "bustDistancePct": 0.152,
+          "marginUsd": 10000,
+          "notionalUsd": 5000000
+        }
+      ],
+      "protocolWide": {
+        "longNotionalUsd": 1331038240.39,
+        "shortNotionalUsd": 1144895476.32,
+        "longCount": 1495,
+        "shortCount": 884,
+        "resolution": "API buckets of 0.0067% of mark; a bucket counts when its center is in the window"
+      },
+      "method": "A long busts below mark and a short above. Bust prices come from the live wallet snapshots (exact protocol values). Buckets split mark*(1-pct) to mark*(1+pct) into 20 equal bins. protocolWide comes from Papertrade liquidation-map and covers every open position."
+    },
+    "estimate": {
+      "asOf": "2026-10-10T20:52:30.348Z",
+      "market": "BTC",
+      "side": "long",
+      "leverage": 100,
+      "marginUsd": 100,
+      "notionalUsd": 10000,
+      "entryPrice": 83036.71659099,
+      "entryPriceSource": "live-mark",
+      "markPrice": 83036.71659099,
+      "bustPrice": 82245.5,
+      "bustDistanceFromEntryPct": 0.9529,
+      "wouldBeAccepted": true,
+      "openIssues": [],
+      "paper": {
+        "mintRatePerUsdOfLossBasis": 44.6121,
+        "trackedLpUsd": 5462300.08,
+        "tailProgressUsd": 59661478.6
+      },
+      "close": {
+        "exitPrice": 82621.5,
+        "outcome": "loss",
+        "rawPnlUsd": -50,
+        "adjustedPnlUsd": -50,
+        "winFeeUsd": 0,
+        "netPnlUsd": -50,
+        "keptFractionOfRawGain": null,
+        "paperMintBasisUsd": 49,
+        "paperMinted": 2186.08
+      },
+      "scenarios": [
+        {
+          "movePct": -5,
+          "exitPrice": 78884.9,
+          "outcome": "liquidated",
+          "rawPnlUsd": -100,
+          "adjustedPnlUsd": -100,
+          "winFeeUsd": 0,
+          "netPnlUsd": -100,
+          "keptFractionOfRawGain": null,
+          "paperMintBasisUsd": 100,
+          "paperMinted": 4461.21
+        },
+        {
+          "movePct": -2,
+          "exitPrice": 81376,
+          "outcome": "liquidated",
+          "rawPnlUsd": -100,
+          "adjustedPnlUsd": -100,
+          "winFeeUsd": 0,
+          "netPnlUsd": -100,
+          "keptFractionOfRawGain": null,
+          "paperMintBasisUsd": 100,
+          "paperMinted": 4461.21
+        }
+      ],
+      "method": "Bust price is the protocol two-step formula with the instrument bust buffer. Wins apply the entry/50000 deadband, asymmetric impact and the 2% win fee; losses pay the raw loss; crossing bust forfeits the margin. A loss mints PAPER on 98% of the loss (liquidation: 100% of margin) at the live mint rate."
+    },
+    "traders-top": {
+      "asOf": "2026-10-10T20:52:30.348Z",
+      "window": "7d",
+      "totalAccounts": 13491,
+      "traders": [
+        {
+          "rank": 1,
+          "wallet": "0xf6ecdf3700abfe1ec460fa656c33976f70850b33",
+          "name": null,
+          "windowedPnlUsd": 58009.98,
+          "realizedPnlUsd": 57009.44,
+          "volumeUsd": 13836100,
+          "balanceUsd": 70508.44,
+          "open": {
+            "positions": 2,
+            "notionalUsd": 3846100,
+            "unrealizedPnlUsd": 1000.54
+          },
+          "lastActive": "2026-10-10T20:51:59.000Z",
+          "stats": {
+            "closedTrades": 1,
+            "wins": 1,
+            "losses": 0,
+            "liquidations": 0,
+            "winRatePct": 100,
+            "avgLeverage": 666,
+            "marginWeightedLeverage": 666,
+            "avgHoldMinutes": 37,
+            "truncated": false
+          }
+        },
+        {
+          "rank": 2,
+          "wallet": "0x41cd92065f8bea45531e237006cbfdc8067160ee",
+          "name": null,
+          "windowedPnlUsd": 56516.79,
+          "realizedPnlUsd": 49984.95,
+          "volumeUsd": 114000000,
+          "balanceUsd": 31471.24,
+          "open": {
+            "positions": 1,
+            "notionalUsd": 10000000,
+            "unrealizedPnlUsd": 6531.84
+          },
+          "lastActive": "2026-10-10T20:19:00.000Z",
+          "stats": {
+            "closedTrades": 11,
+            "wins": 8,
+            "losses": 3,
+            "liquidations": 0,
+            "winRatePct": 72.7,
+            "avgLeverage": 47.3,
+            "marginWeightedLeverage": 47.3,
+            "avgHoldMinutes": 31.7,
+            "truncated": false
+          }
+        }
+      ],
+      "method": "Ranked by Papertrade leaderboard windowed PnL. winRatePct, avgLeverage and avgHoldMinutes are derived from each trader's newest 75 closed trades inside the window (stats.truncated flags a full page). stats is null if the trade history could not be read."
+    }
+  }
+}

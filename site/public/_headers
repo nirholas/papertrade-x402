@@ -2,7 +2,23 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'self' https://papertrade-os.pages.dev https://*.pages.dev
+  Link: </openapi.json>; rel="service-desc"; type="application/openapi+json", </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </mcp>; rel="mcp-server", </docs/>; rel="service-doc", </llms.txt>; rel="describedby"; type="text/plain"
+
+/index.html
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'self' https://papertrade-os.pages.dev https://*.pages.dev
+
+/docs/*
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'
+
+/docs/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/docs/search-index.json
+  Access-Control-Allow-Origin: *
 
 /app.js
   Cache-Control: public, max-age=300
@@ -13,3 +29,13 @@
 /llms.txt
   Access-Control-Allow-Origin: *
   Content-Type: text/plain; charset=utf-8
+
+/llms-full.txt
+  Access-Control-Allow-Origin: *
+  Content-Type: text/plain; charset=utf-8
+
+/robots.txt
+  Access-Control-Allow-Origin: *
+
+/sitemap.xml
+  Access-Control-Allow-Origin: *
