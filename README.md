@@ -92,4 +92,4 @@ npm publish        # client package; runs typecheck, test and build first
 
 ## Disclaimer
 
-Unofficial, not affiliated with Papertrade. High leverage can lose your whole margin. MIT licensed.
+Unofficial, not affiliated with Papertrade. High leverage can lose your whole margin. Apache-2.0 licensed.

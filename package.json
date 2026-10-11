@@ -2,7 +2,7 @@
   "name": "papertrade-x402",
   "version": "0.1.0",
   "description": "Unofficial pay-per-call Papertrade intelligence API for AI agents over the x402 protocol: wallet liquidation risk, liquidation maps, settlement estimates and top-trader stats, paid in USDC on Solana (first) or Base. Includes a typed x402 client.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "author": "nirholas",
   "type": "module",
   "sideEffects": false,

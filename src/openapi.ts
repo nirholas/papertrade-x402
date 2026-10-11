@@ -52,7 +52,7 @@ export function buildOpenApi(config: ResolvedConfig, origin: string) {
       title: 'papertrade-x402',
       version: VERSION,
       description: `Unofficial pay-per-call Papertrade intelligence API (x402). Networks: ${activeNetworks(config).map((n) => n.network).join(', ') || 'none configured'}. Not affiliated with Papertrade.`,
-      license: { name: 'MIT', url: 'https://opensource.org/licenses/MIT' },
+      license: { name: 'Apache-2.0', url: 'https://www.apache.org/licenses/LICENSE-2.0' },
     },
     servers: [{ url: origin }],
     paths,
