@@ -1,0 +1,6839 @@
+{
+ "recordedAt": "2026-10-10T20:52:30.348Z",
+ "nowMs": 1791665550348,
+ "trading": {
+  "schemaVersion": 1,
+  "indexedThroughBlock": 48199025,
+  "tradingPaused": false,
+  "minimumTradeSizeRaw": {
+   "__bigint": "10000000000000000000"
+  },
+  "minimumOpenNotionalRaw": {
+   "__bigint": "10000000000000000000000"
+  },
+  "accRewardPerShareRaw": {
+   "__bigint": "8709904278374229395401056"
+  },
+  "instruments": [
+   {
+    "id": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScale": {
+     "__bigint": "10"
+    },
+    "active": true,
+    "paused": false,
+    "terminal": false,
+    "retired": false,
+    "closeOnly": false,
+    "openable": true,
+    "frozenBidRaw": null,
+    "frozenAskRaw": null,
+    "pausedAtMs": null,
+    "rateMultiplierRaw": {
+     "__bigint": "15000000000000000000000"
+    },
+    "positionMultiplierRaw": {
+     "__bigint": "814598000000000000000"
+    },
+    "maxLeverage": 1000,
+    "maxPositionNotionalRaw": {
+     "__bigint": "10000000000000000000000000"
+    },
+    "bustBufferRaw": {
+     "__bigint": "476041580087574"
+    },
+    "baseRateRaw": {
+     "__bigint": "100000000000000000"
+    },
+    "referenceNotionalRaw": {
+     "__bigint": "100000000000000000000000"
+    },
+    "longOiRaw": {
+     "__bigint": "22390287834043336552934"
+    },
+    "shortOiRaw": {
+     "__bigint": "19412476988780052571981"
+    },
+    "longCapRaw": {
+     "__bigint": "1207459685939735687074747"
+    },
+    "shortCapRaw": {
+     "__bigint": "1207459685939735687074747"
+    }
+   },
+   {
+    "id": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScale": {
+     "__bigint": "100"
+    },
+    "active": true,
+    "paused": false,
+    "terminal": false,
+    "retired": false,
+    "closeOnly": false,
+    "openable": true,
+    "frozenBidRaw": null,
+    "frozenAskRaw": null,
+    "pausedAtMs": null,
+    "rateMultiplierRaw": {
+     "__bigint": "15000000000000000000000"
+    },
+    "positionMultiplierRaw": {
+     "__bigint": "483979000000000000000"
+    },
+    "maxLeverage": 1000,
+    "maxPositionNotionalRaw": {
+     "__bigint": "10000000000000000000000000"
+    },
+    "bustBufferRaw": {
+     "__bigint": "481304050180130"
+    },
+    "baseRateRaw": {
+     "__bigint": "100000000000000000"
+    },
+    "referenceNotionalRaw": {
+     "__bigint": "100000000000000000000000"
+    },
+    "longOiRaw": {
+     "__bigint": "940697162290023254957497"
+    },
+    "shortOiRaw": {
+     "__bigint": "782453555097670657032441"
+    },
+    "longCapRaw": {
+     "__bigint": "40032826918072819712163974"
+    },
+    "shortCapRaw": {
+     "__bigint": "40032826918072819712163974"
+    }
+   }
+  ],
+  "intake": {
+   "revision": 1791650024911878,
+   "minimumPaperStakeRaw": {
+    "__bigint": "1000000000000000000000"
+   },
+   "maximumNetOpenInterestRaw": {
+    "__bigint": "25000000000000000000000000000000"
+   },
+   "actions": {
+    "registerSessionKey": true,
+    "openPosition": true,
+    "closePositions": true,
+    "paperStake": true,
+    "paperUnstake": true,
+    "paperClaim": true,
+    "paperDistribute": true,
+    "registerDeposit": true,
+    "withdrawToCore": true
+   }
+  }
+ },
+ "summary": {
+  "ok": true,
+  "source": {
+   "block": "48199024",
+   "at": 1791665549000,
+   "genesis": 1791326520000
+  },
+  "balances": {
+   "tvl": "125558899707093130000000000",
+   "margin": "45200270396550757756453950",
+   "lp": "5462300084303342038144657",
+   "reserve": "0",
+   "queue": "0"
+  },
+  "activity": {
+   "volume": "482918177517037735752050072473",
+   "open": 4981
+  },
+  "fees": {
+   "pending": "24673365693924246047704",
+   "lifetime": "22300320861157941619607918"
+  },
+  "paper": {
+   "supply": "4641910103693953055831700869",
+   "staked": "4618064219960526865015134323",
+   "trackedLp": "5462300084303342038144657",
+   "accumulator": "8709904278374229395401056",
+   "tailProgress": "59661478595253260512955583",
+   "reserve": "5787331338409147867161757",
+   "unallocated": "0",
+   "pendingRewards": "1582838660040473681005030",
+   "cliff": "2000000000000000000000000",
+   "cap": "5000000000000000000000000",
+   "excess": "462300084303342038144657",
+   "rate": "100000000000000000000",
+   "decay": "120000000000000000000000000"
+  }
+ },
+ "marks": {
+  "0": {
+   "t": 1791665548875,
+   "price": 83036.71659099,
+   "gapBefore": false
+  },
+  "1": {
+   "t": 1791665549125,
+   "price": 2509.45957087,
+   "gapBefore": false
+  }
+ },
+ "board24": {
+  "ok": true,
+  "count": 13491,
+  "summary": {
+   "uniqueAccounts": 13491,
+   "trackedBalance": "67979824508761554179693333",
+   "trackedQueued": "0",
+   "trackedOpenNotional": "7792289975035740584366251829",
+   "trackedPaper": "4642119263254362409717101263"
+  },
+  "accounts": [
+   {
+    "address": "0x3f139ef9f371fbbfc299aa65b93534e177141b18",
+    "leaderboardName": null,
+    "realizedPnl": "-56150781376330129646562",
+    "totalWindowedPnl": "-64150319129188651410402",
+    "totalVolume": "462841500000000000000000000",
+    "lastActiveTs": 1791663840,
+    "currentBalance": "6697961258640161965154",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 11,
+    "currentOpenNotional": "103990300000000000000000000",
+    "currentUnrealizedPnl": "-7999537752858521763840",
+    "paperTotal": "17541815081513905935153476",
+    "_leaderboardRank": 13415
+   },
+   {
+    "address": "0xd04f97191224cf0396b09acb80adb06b5823ecad",
+    "leaderboardName": null,
+    "realizedPnl": "-112227007197311897986227",
+    "totalWindowedPnl": "-98909808957435673601203",
+    "totalVolume": "720000000000000000000000000",
+    "lastActiveTs": 1791665060,
+    "currentBalance": "240991533998856824587254",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 10,
+    "currentOpenNotional": "100000000000000000000000000",
+    "currentUnrealizedPnl": "13317198239876224385024",
+    "paperTotal": "17253448177521501509372445",
+    "_leaderboardRank": 13438
+   },
+   {
+    "address": "0xd7e1910d2c0c0bf01fea14ce8eba49b6a0486e6f",
+    "leaderboardName": "bobby fischer",
+    "realizedPnl": "-713908414611466719337151",
+    "totalWindowedPnl": "-726522956415179646835391",
+    "totalVolume": "6755622000000000000000000000",
+    "lastActiveTs": 1791665309,
+    "currentBalance": "32702802172522700184660",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 10,
+    "currentOpenNotional": "100000000000000000000000000",
+    "currentUnrealizedPnl": "-12614541803712927498240",
+    "paperTotal": "94977503357166453915980874",
+    "_leaderboardRank": 13488
+   },
+   {
+    "address": "0xb792585118d48bf91ac3534185bfa382effc961e",
+    "leaderboardName": null,
+    "realizedPnl": "-25923809027474050854842",
+    "totalWindowedPnl": "-42720189255334624309178",
+    "totalVolume": "304915408000000000000000000",
+    "lastActiveTs": 1791662697,
+    "currentBalance": "9583730918951162",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 10,
+    "currentOpenNotional": "95234496000000000000000000",
+    "currentUnrealizedPnl": "-16796380227860573454336",
+    "paperTotal": "5803413174090543864882655",
+    "_leaderboardRank": 13370
+   },
+   {
+    "address": "0x4e76d59aa67230b12315251c9f453d4f7450142e",
+    "leaderboardName": null,
+    "realizedPnl": "3621773229295686550395",
+    "totalWindowedPnl": "5958802579088676127611",
+    "totalVolume": "569369282340000000000000000",
+    "lastActiveTs": 1791665508,
+    "currentBalance": "74480789622295686550395",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 17,
+    "currentOpenNotional": "85000000000000000000000000",
+    "currentUnrealizedPnl": "2337029349792989577216",
+    "paperTotal": "5460209103015320608840494",
+    "_leaderboardRank": 73
+   },
+   {
+    "address": "0x04af25ec41789822a05b737e3fc1f8a5627fcc89",
+    "leaderboardName": null,
+    "realizedPnl": "-151168705633037031250508",
+    "totalWindowedPnl": "-154717747655529997998668",
+    "totalVolume": "1458297396400000000000000000",
+    "lastActiveTs": 1791661182,
+    "currentBalance": "28781302071962968749492",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 8,
+    "currentOpenNotional": "80000000000000000000000000",
+    "currentUnrealizedPnl": "-3549042022492966748160",
+    "paperTotal": "29423538177615274127937826",
+    "_leaderboardRank": 13457
+   },
+   {
+    "address": "0x31ec17112e9b7b0da22cd562750b09e680b82131",
+    "leaderboardName": null,
+    "realizedPnl": "-41062920270944077352882",
+    "totalWindowedPnl": "-55654102766208144117682",
+    "totalVolume": "330000000000000000000000000",
+    "lastActiveTs": 1791662282,
+    "currentBalance": "102257507232817110860016",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 8,
+    "currentOpenNotional": "80000000000000000000000000",
+    "currentUnrealizedPnl": "-14591182495264066764800",
+    "paperTotal": "10226034097124148221541223",
+    "_leaderboardRank": 13403
+   },
+   {
+    "address": "0xb7602406102e5bc6058a69d8f86bc548058e779b",
+    "leaderboardName": "Pump",
+    "realizedPnl": "-391675791777641802332383",
+    "totalWindowedPnl": "-349304146706130006276319",
+    "totalVolume": "1851950000000000000000000000",
+    "lastActiveTs": 1791663780,
+    "currentBalance": "133095538306221307149071",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 8,
+    "currentOpenNotional": "80000000000000000000000000",
+    "currentUnrealizedPnl": "42371645071511796056064",
+    "paperTotal": "50271189643060657259494193",
+    "_leaderboardRank": 13482
+   },
+   {
+    "address": "0x39e4cc9e5dfa0f7f5ea39ec2be1fcf0618848f3f",
+    "leaderboardName": null,
+    "realizedPnl": "-59577458214604355250210",
+    "totalWindowedPnl": "-71459005187621784758306",
+    "totalVolume": "533761939975760000000000000",
+    "lastActiveTs": 1791661740,
+    "currentBalance": "5878078800418878347671",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 8,
+    "currentOpenNotional": "79999999999960000000000000",
+    "currentUnrealizedPnl": "-11881546973017429508096",
+    "paperTotal": "11057583275365143735384853",
+    "_leaderboardRank": 13424
+   },
+   {
+    "address": "0x0f722b69e709bc904999878364ffba07f426a669",
+    "leaderboardName": null,
+    "realizedPnl": "-108731986475886225029079",
+    "totalWindowedPnl": "15118259792242515740713",
+    "totalVolume": "739534345414111074653493150",
+    "lastActiveTs": 1791663004,
+    "currentBalance": "1055197070529261586053234",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 8,
+    "currentOpenNotional": "79919938290616867745593375",
+    "currentUnrealizedPnl": "123850246268128740769792",
+    "paperTotal": "16611339266411011049405446",
+    "_leaderboardRank": 31
+   },
+   {
+    "address": "0x0c80eefc566985bf8491d784c214e77a9022870a",
+    "leaderboardName": null,
+    "realizedPnl": "-122994463389261148686148",
+    "totalWindowedPnl": "-135216244761341953804100",
+    "totalVolume": "624799000000000000000000000",
+    "lastActiveTs": 1791663982,
+    "currentBalance": "21612594867736738871018",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 12,
+    "currentOpenNotional": "72000000000000000000000000",
+    "currentUnrealizedPnl": "-12221781372080805117952",
+    "paperTotal": "28898040248903413474039345",
+    "_leaderboardRank": 13453
+   },
+   {
+    "address": "0x493ee7f6e3a4fe66a5d7663ef7ad66d1c4a2d0cd",
+    "leaderboardName": "nevin",
+    "realizedPnl": "-91123965886011684458448",
+    "totalWindowedPnl": "-93300654835181216370640",
+    "totalVolume": "732580000000000000000000000",
+    "lastActiveTs": 1791665153,
+    "currentBalance": "544759055159281629484",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 10,
+    "currentOpenNotional": "63096000000000000000000000",
+    "currentUnrealizedPnl": "-2176688949169531912192",
+    "paperTotal": "21253453532476685209807789",
+    "_leaderboardRank": 13434
+   }
+  ],
+  "pageInfo": {
+   "page": 1,
+   "totalPages": 1125
+  }
+ },
+ "wallets": [
+  {
+   "address": "0x3f139ef9f371fbbfc299aa65b93534e177141b18",
+   "accountRevision": 1,
+   "indexedThroughBlock": 48197799,
+   "walletRevision": 48197287,
+   "indexedThroughTimestamp": 1791664344,
+   "sessionKeys": {
+    "0x2604c67c467da3a3d29a29ce35314c4b9f28d2f1": {
+     "__bigint": "1794231522"
+    },
+    "0xd8b7c83c0340757c1dd638951b4f0d4bd6197771": {
+     "__bigint": "1794232946"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "216"
+   },
+   "balance": {
+    "__bigint": "6697961258640161965154"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "764032000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "6697961258640161965154"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "17541815081513905935153476"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "152787530228927550873274"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "749923508453000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-56150781376330129646562"
+    },
+    "feesPaidRaw": {
+     "__bigint": "4067025460635813668547"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "462841500000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "76957234181970291611716"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "53541"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830655"
+     },
+     "marginRaw": {
+      "__bigint": "68400000000000000000000"
+     },
+     "leverage": 145,
+     "bustPriceRaw": {
+      "__bigint": "835985"
+     },
+     "openedAtMs": 1791662603000,
+     "intentId": "0x70abfb2471d2aa227c2105b1b7774f935ee528bc9ee873d57cded0285933265e"
+    },
+    {
+     "positionId": {
+      "__bigint": "53523"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830655"
+     },
+     "marginRaw": {
+      "__bigint": "68500000000000000000000"
+     },
+     "leverage": 145,
+     "bustPriceRaw": {
+      "__bigint": "825319"
+     },
+     "openedAtMs": 1791662597000,
+     "intentId": "0xb5f8e93dbc80b8d95c742fd36fcd2a94dcdb30da9370e48aa727cf7c5cd52fc4"
+    },
+    {
+     "positionId": {
+      "__bigint": "52653"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "13800000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "832837"
+     },
+     "openedAtMs": 1791662349000,
+     "intentId": "0x557b82745a5800aaa2d09668f14ba4f807c40598e6779ec128c62a72c340f82a"
+    },
+    {
+     "positionId": {
+      "__bigint": "35017"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "829765"
+     },
+     "marginRaw": {
+      "__bigint": "80000000000000000000000"
+     },
+     "leverage": 125,
+     "bustPriceRaw": {
+      "__bigint": "836005"
+     },
+     "openedAtMs": 1791656583000,
+     "intentId": "0x2e9b435f589e9bed23d0ef48592bd29cfef8e8e0093fddd488efc23a3965b004"
+    },
+    {
+     "positionId": {
+      "__bigint": "35015"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "829765"
+     },
+     "marginRaw": {
+      "__bigint": "80000000000000000000000"
+     },
+     "leverage": 125,
+     "bustPriceRaw": {
+      "__bigint": "823518"
+     },
+     "openedAtMs": 1791656583000,
+     "intentId": "0xa4bb452e4c9de7f1284d013e761e148ef2810fff096b2999efb7fb89f17592f1"
+    },
+    {
+     "positionId": {
+      "__bigint": "35011"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "829795"
+     },
+     "marginRaw": {
+      "__bigint": "80000000000000000000000"
+     },
+     "leverage": 125,
+     "bustPriceRaw": {
+      "__bigint": "836035"
+     },
+     "openedAtMs": 1791656578000,
+     "intentId": "0x66a3eb4b48dd3f86a9b7f03b48dccbcf77beb5e06d238ed9ac2d992422c04405"
+    },
+    {
+     "positionId": {
+      "__bigint": "35009"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "829795"
+     },
+     "marginRaw": {
+      "__bigint": "80000000000000000000000"
+     },
+     "leverage": 125,
+     "bustPriceRaw": {
+      "__bigint": "823548"
+     },
+     "openedAtMs": 1791656578000,
+     "intentId": "0xa2a44edb3288351fbb0a2a5cbf1694e74fc119b13ce4a86c1b00f8247b9dd699"
+    },
+    {
+     "positionId": {
+      "__bigint": "34348"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830405"
+     },
+     "marginRaw": {
+      "__bigint": "80000000000000000000000"
+     },
+     "leverage": 125,
+     "bustPriceRaw": {
+      "__bigint": "836650"
+     },
+     "openedAtMs": 1791656191000,
+     "intentId": "0x638aa97c23467d73a0ae5713b86b77456ad9170bc016f0913990acfd2a7c044d"
+    },
+    {
+     "positionId": {
+      "__bigint": "34345"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830405"
+     },
+     "marginRaw": {
+      "__bigint": "80000000000000000000000"
+     },
+     "leverage": 125,
+     "bustPriceRaw": {
+      "__bigint": "824154"
+     },
+     "openedAtMs": 1791656191000,
+     "intentId": "0xddad5902741f6632e473ce610639e987fcee7d4ef266ebfb78463b0259049534"
+    },
+    {
+     "positionId": {
+      "__bigint": "14377"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830055"
+     },
+     "marginRaw": {
+      "__bigint": "66666000000000000000000"
+     },
+     "leverage": 150,
+     "bustPriceRaw": {
+      "__bigint": "835191"
+     },
+     "openedAtMs": 1791648080000,
+     "intentId": "0xce95e24091588b89a6cb3f87cd904f94330d4d62f34d5640f4dd4f2ca5b8668b"
+    },
+    {
+     "positionId": {
+      "__bigint": "14375"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830055"
+     },
+     "marginRaw": {
+      "__bigint": "66666000000000000000000"
+     },
+     "leverage": 150,
+     "bustPriceRaw": {
+      "__bigint": "824914"
+     },
+     "openedAtMs": 1791648079000,
+     "intentId": "0xdc133790fd2f3c06485ba7fbce6780d901c5ec95d86ffd58752141fbcd3e3f33"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0xd04f97191224cf0396b09acb80adb06b5823ecad",
+   "accountRevision": 19,
+   "indexedThroughBlock": 48198527,
+   "walletRevision": 48198527,
+   "indexedThroughTimestamp": 1791665060,
+   "sessionKeys": {
+    "0x9ee7b82583c5adef76d905ec774db0be0eca7da6": {
+     "__bigint": "1794247497"
+    },
+    "0xfba4d4db3c5838f7295faeedead659db282d4469": {
+     "__bigint": "1794245113"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "198"
+   },
+   "balance": {
+    "__bigint": "240991533998856824587254"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "1000000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "240991533998856824587254"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "17253448177521501509372445"
+    },
+    "pendingBase": {
+     "__bigint": "3901187962624557069166"
+    },
+    "rewardDebt": {
+     "__bigint": "150275882098102576913523"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "1349994721816000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-112227007197311897986227"
+    },
+    "feesPaidRaw": {
+     "__bigint": "5041090160819699017399"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "720000000000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "3223819380168722573481"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "61289"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250735"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253121"
+     },
+     "openedAtMs": 1791665053000,
+     "intentId": "0x47e4a04bd108b234baded50ceb9aa9f55b45f2fcd877f6ba95bb5100f8b0099c"
+    },
+    {
+     "positionId": {
+      "__bigint": "61280"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250735"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253121"
+     },
+     "openedAtMs": 1791665049000,
+     "intentId": "0x4eca5d29bdc052f92b97c6bf8b23a21e306a447bad32bad90bf9940721666fe8"
+    },
+    {
+     "positionId": {
+      "__bigint": "61271"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250735"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253121"
+     },
+     "openedAtMs": 1791665045000,
+     "intentId": "0x6b62525c64ab19eab33f2388d9598f51f9f95c0573c6b8858bf5a262428f428e"
+    },
+    {
+     "positionId": {
+      "__bigint": "61250"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250735"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253121"
+     },
+     "openedAtMs": 1791665040000,
+     "intentId": "0xcf1dc0ede174a77fc0037001da71fdaf5949454589a2cba8dc028ec925a85f83"
+    },
+    {
+     "positionId": {
+      "__bigint": "61240"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250735"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253121"
+     },
+     "openedAtMs": 1791665036000,
+     "intentId": "0x60b4ef40b3dd0424ef861a66593d642d66b730577efc2b6a3fa4ebe4a752e3fd"
+    },
+    {
+     "positionId": {
+      "__bigint": "58832"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250575"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248189"
+     },
+     "openedAtMs": 1791664306000,
+     "intentId": "0xf8065a3b78a933b28b92857505a822846904633fc843f5efe2644818e0fce91f"
+    },
+    {
+     "positionId": {
+      "__bigint": "58830"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250575"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248189"
+     },
+     "openedAtMs": 1791664303000,
+     "intentId": "0xea6b50667ddd470c4af3ea425ed6ac25033bbd2bfbc24b99e16d0d7a6a564a2e"
+    },
+    {
+     "positionId": {
+      "__bigint": "58820"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250575"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248189"
+     },
+     "openedAtMs": 1791664300000,
+     "intentId": "0x9845864154307fbda2f5b933e314f84cc4f3627bbe0aa75d2facc09ce3e12412"
+    },
+    {
+     "positionId": {
+      "__bigint": "58818"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250575"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248189"
+     },
+     "openedAtMs": 1791664300000,
+     "intentId": "0xd8fe255b8e3a1945780da0f6c6893086482c3b30b5dd10c214f79dede2b3a950"
+    },
+    {
+     "positionId": {
+      "__bigint": "58806"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250575"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248189"
+     },
+     "openedAtMs": 1791664294000,
+     "intentId": "0x92696b576780dcf11be0b9393980672d7270e4a8fa42493d5a71de5293538976"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0xd7e1910d2c0c0bf01fea14ce8eba49b6a0486e6f",
+   "accountRevision": 89,
+   "indexedThroughBlock": 48198780,
+   "walletRevision": 48198780,
+   "indexedThroughTimestamp": 1791665309,
+   "sessionKeys": {
+    "0x535d738afae62fde8fb0bafd9275b48787a6f929": {
+     "__bigint": "1794181822"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "1492"
+   },
+   "balance": {
+    "__bigint": "32702802172522700184660"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "1000000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "32702802172522700184660"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "94977503357166453915980874"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "827244962839886832578945"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "1517866332273000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-713908414611466719337151"
+    },
+    "feesPaidRaw": {
+     "__bigint": "18676943493344848547886"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "6755622000000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "228744884510989419521811"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "60905"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253171"
+     },
+     "openedAtMs": 1791664917000,
+     "intentId": "0xa9b10a066111220ed7d121d58377e3478b5a82999940a3ae7b78ddad660d6700"
+    },
+    {
+     "positionId": {
+      "__bigint": "60904"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248397"
+     },
+     "openedAtMs": 1791664916000,
+     "intentId": "0xc569ed39025b818519541fd7d7a3fc775122ab5f3bc68eade63c55d13383d6b0"
+    },
+    {
+     "positionId": {
+      "__bigint": "60899"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253171"
+     },
+     "openedAtMs": 1791664914000,
+     "intentId": "0x0656957abfda57597564bcb6b05933519206c320674267f39fc16a6645aab454"
+    },
+    {
+     "positionId": {
+      "__bigint": "60894"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248397"
+     },
+     "openedAtMs": 1791664914000,
+     "intentId": "0x602bbe3d90fcb4436a9b39789faa71876220bc532b2fbcb429a2418c11486741"
+    },
+    {
+     "positionId": {
+      "__bigint": "60872"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253171"
+     },
+     "openedAtMs": 1791664911000,
+     "intentId": "0x562046635d1b90ca68a95859634982162c980a3aea601048b93601e966636fa7"
+    },
+    {
+     "positionId": {
+      "__bigint": "60865"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248397"
+     },
+     "openedAtMs": 1791664910000,
+     "intentId": "0xd11ff496cab7ce6f8cc7a7ef14fbed2a1f930c2f0d8587d46627eb249031bdd7"
+    },
+    {
+     "positionId": {
+      "__bigint": "60848"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253171"
+     },
+     "openedAtMs": 1791664908000,
+     "intentId": "0xab2706ff524908b4017c9b8677dfe65ed561f8003f308fd6fc5a5ef082fa32bb"
+    },
+    {
+     "positionId": {
+      "__bigint": "60846"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248397"
+     },
+     "openedAtMs": 1791664907000,
+     "intentId": "0x9d3f292a4ca217d8af4921349f809ee6a50c295839b4e4b4c3c40af5aa75c6ca"
+    },
+    {
+     "positionId": {
+      "__bigint": "60838"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "253171"
+     },
+     "openedAtMs": 1791664905000,
+     "intentId": "0xbb3153495331f6ab69bfadf6d4f299d0c8045bdb600eeb4d7da722d1558ba186"
+    },
+    {
+     "positionId": {
+      "__bigint": "60836"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250785"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "248397"
+     },
+     "openedAtMs": 1791664904000,
+     "intentId": "0x21b1b8d0f419c6d5f76badb189aba6b8fb021c49be5c5ce9a99f961e6bb70f3c"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0xb792585118d48bf91ac3534185bfa382effc961e",
+   "accountRevision": 31,
+   "indexedThroughBlock": 48196124,
+   "walletRevision": 48196124,
+   "indexedThroughTimestamp": 1791662697,
+   "sessionKeys": {
+    "0x0609b3e53d9048ee910c9caebeb06fc075a55478": {
+     "__bigint": "1794231332"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "82"
+   },
+   "balance": {
+    "__bigint": "9583730918951162"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "476172480000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "9583730918951162"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "5803413174090543864882655"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "48332716111869164038803"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "500000200000000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-25923809027474050854842"
+    },
+    "feesPaidRaw": {
+     "__bigint": "1814801265191405341546"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "304915408000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "2096098611204969806004"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "53808"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251255"
+     },
+     "marginRaw": {
+      "__bigint": "38086240000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252390"
+     },
+     "openedAtMs": 1791662697000,
+     "intentId": "0x566f4f3b44f083fef2fd0af1f6ef85e694a8b714a8f387bbb68214093c57c5f1"
+    },
+    {
+     "positionId": {
+      "__bigint": "53804"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "38086240000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250129"
+     },
+     "openedAtMs": 1791662695000,
+     "intentId": "0xb54fb70ba074ecaab35e518e23140fdd8b7f65928c640c994c9891e5b211aba6"
+    },
+    {
+     "positionId": {
+      "__bigint": "53795"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252400"
+     },
+     "openedAtMs": 1791662693000,
+     "intentId": "0xafde740256dd2d51311198dce2f8009c426e9b5d1a7690b6ad5aef7d7b056115"
+    },
+    {
+     "positionId": {
+      "__bigint": "53789"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250129"
+     },
+     "openedAtMs": 1791662692000,
+     "intentId": "0x14dacf11000a977ba41ccdeec7b4c1eecd1772760a6cd6f1d088e397edb1a93b"
+    },
+    {
+     "positionId": {
+      "__bigint": "53778"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252400"
+     },
+     "openedAtMs": 1791662690000,
+     "intentId": "0xff9a96617e077a79c4c1125f637e1e265bcc01c6a73585c3776dcd4ad73d9e65"
+    },
+    {
+     "positionId": {
+      "__bigint": "53777"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250129"
+     },
+     "openedAtMs": 1791662689000,
+     "intentId": "0xe486a07cfcbf47b09ea661a50a99ae59e430fc57597b6445fc36edbf9ffb8c1e"
+    },
+    {
+     "positionId": {
+      "__bigint": "53772"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252400"
+     },
+     "openedAtMs": 1791662687000,
+     "intentId": "0x02b2e759d265e34968982e5b6ef64720bd2874122a3544c1710eec2d4a2a8242"
+    },
+    {
+     "positionId": {
+      "__bigint": "53770"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250129"
+     },
+     "openedAtMs": 1791662686000,
+     "intentId": "0x2b6f987b6dac6d73443eefb9b801570043a6fe8e24a12a868485d7ade2e57c1a"
+    },
+    {
+     "positionId": {
+      "__bigint": "53765"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252400"
+     },
+     "openedAtMs": 1791662684000,
+     "intentId": "0xffad3d4907a436efbe045c509bb83dd4ef5791872c3ca74a9f38691c1ba4da02"
+    },
+    {
+     "positionId": {
+      "__bigint": "53764"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251265"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250129"
+     },
+     "openedAtMs": 1791662683000,
+     "intentId": "0xc14112fd72a144ee40d6c2b311d1734f0e85106e41a7d309d438f089845e567b"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x4e76d59aa67230b12315251c9f453d4f7450142e",
+   "accountRevision": 1,
+   "indexedThroughBlock": 48199012,
+   "walletRevision": 48198982,
+   "indexedThroughTimestamp": 1791665537,
+   "sessionKeys": {
+    "0x0a90369f30c2521dab9ee06b1f54270b53149025": {
+     "__bigint": "1794244848"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "214"
+   },
+   "balance": {
+    "__bigint": "74480789622295686550395"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "170000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "74480789622295686550395"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "5460209103015320608840494"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "47557898627171054421866"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "240859016393000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "3621773229295686550395"
+    },
+    "feesPaidRaw": {
+     "__bigint": "1964913960849522206434"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "569369282340000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "0"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "61902"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665298000,
+     "intentId": "0x015b5ffa2f6e9a3c7f423090a69e05a592e339161c9bdfa06ef55c26307fae7d"
+    },
+    {
+     "positionId": {
+      "__bigint": "61896"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665297000,
+     "intentId": "0x728a60a1a3867afa6920788f799fa91da247b18588c64c91d38d607ba9a29dc2"
+    },
+    {
+     "positionId": {
+      "__bigint": "61893"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665296000,
+     "intentId": "0xea0c25f6e4eb539e388e063adeb69e30c96d424b7706c83524a1834be068fe28"
+    },
+    {
+     "positionId": {
+      "__bigint": "61888"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665295000,
+     "intentId": "0xe5471144a0cc292686aacd79f83f159cc385e9943761d3f1b729c1622f321c23"
+    },
+    {
+     "positionId": {
+      "__bigint": "61885"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665294000,
+     "intentId": "0x2ac76f7abf06e88989ee4cd5a4dea219b85f46358fd3c7adf3691cf1fc45999d"
+    },
+    {
+     "positionId": {
+      "__bigint": "61882"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665293000,
+     "intentId": "0x209dd17a3b6218711e27273ee8d505da08f57d02589370a828c6213dc4466733"
+    },
+    {
+     "positionId": {
+      "__bigint": "61880"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665292000,
+     "intentId": "0x061d107104d41b36e5d1c764e4f184d09ae75807fe00ed8037f73134f10bbbb0"
+    },
+    {
+     "positionId": {
+      "__bigint": "61873"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830365"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "831629"
+     },
+     "openedAtMs": 1791665290000,
+     "intentId": "0xc7812d1ebf308601de8686d066227f336c446b366ba60a181ef2ef8a931fd654"
+    },
+    {
+     "positionId": {
+      "__bigint": "61229"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665033000,
+     "intentId": "0xdf1677013420f1880070c92c377dba4d7d858f05b0c7f7570e85ed38350ccc90"
+    },
+    {
+     "positionId": {
+      "__bigint": "61226"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665032000,
+     "intentId": "0x86cb623813e8708c859d8d36bf3c2e0508b7b13171894a997984e630152a9a3b"
+    },
+    {
+     "positionId": {
+      "__bigint": "61223"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665031000,
+     "intentId": "0xeb96f5224cfef7c521b2a0c0073e7cd1f2719bef68adf11e124f288c638a4a89"
+    },
+    {
+     "positionId": {
+      "__bigint": "61220"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665030000,
+     "intentId": "0xdf59ef8307d1b043f78892d427400d9a43afdbb9285f2a545386f6cf1f37f48f"
+    },
+    {
+     "positionId": {
+      "__bigint": "61219"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665030000,
+     "intentId": "0x3cd4f11816016227fcf02cb9f44453f18e1913e6ce0b0add23e516c593ad0a22"
+    },
+    {
+     "positionId": {
+      "__bigint": "61218"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665029000,
+     "intentId": "0x6c94d8aa1a1b64ea9a9f5c586dea5992f403da0e0cd0797a3e2409e64184f07c"
+    },
+    {
+     "positionId": {
+      "__bigint": "61215"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665028000,
+     "intentId": "0x3f3030df29afb9f369e2a927e8acafc0eecbdf99bd45395220474e613891ec6b"
+    },
+    {
+     "positionId": {
+      "__bigint": "61213"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665027000,
+     "intentId": "0x44783072e79a8497774834b24ebd02dbafac92c547b6c632be0c85838aad36c8"
+    },
+    {
+     "positionId": {
+      "__bigint": "61212"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "10000000000000000000000"
+     },
+     "leverage": 500,
+     "bustPriceRaw": {
+      "__bigint": "828969"
+     },
+     "openedAtMs": 1791665026000,
+     "intentId": "0xa1ef54e2dee7d818e40bfa2effec7d4e24e1d98cb23e21c96fe97bb98e48b84f"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x04af25ec41789822a05b737e3fc1f8a5627fcc89",
+   "accountRevision": 49,
+   "indexedThroughBlock": 48194584,
+   "walletRevision": 48194584,
+   "indexedThroughTimestamp": 1791661182,
+   "sessionKeys": {
+    "0xaa11aa1a7b07cac5352906bfe6357470d917fe0a": {
+     "__bigint": "1794192796"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "508"
+   },
+   "balance": {
+    "__bigint": "28781302071962968749492"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "320000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "28781302071962968749492"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "29423538177615274127937826"
+    },
+    "pendingBase": {
+     "__bigint": "106808885929512838087708"
+    },
+    "rewardDebt": {
+     "__bigint": "245048814393313357071918"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "499950007705000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-151168705633037031250508"
+    },
+    "feesPaidRaw": {
+     "__bigint": "5922830381499593069682"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "1458297396400000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "0"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "48495"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "833390"
+     },
+     "openedAtMs": 1791661176000,
+     "intentId": "0x2816261ca545be1eb8a55abd4eee8f44d1a36ca45c73efcfc961367fc1d3a8a5"
+    },
+    {
+     "positionId": {
+      "__bigint": "48485"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "827537"
+     },
+     "openedAtMs": 1791661171000,
+     "intentId": "0x4965b73ab51373f9209eb1a7f6a2f1ef5787a2f59de3760db59585bd50f489b4"
+    },
+    {
+     "positionId": {
+      "__bigint": "48468"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "827537"
+     },
+     "openedAtMs": 1791661166000,
+     "intentId": "0xc2cd10b07201dbf641d8f802daea6ae2800906d25a061fa00e174170a53f24e6"
+    },
+    {
+     "positionId": {
+      "__bigint": "48455"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "833390"
+     },
+     "openedAtMs": 1791661164000,
+     "intentId": "0x5eda2d7e9da59c9d57557f9a143b0a98b4f21b90ea06505b0a1e9fa2a6b9298d"
+    },
+    {
+     "positionId": {
+      "__bigint": "48436"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "833390"
+     },
+     "openedAtMs": 1791661160000,
+     "intentId": "0xe4be722b01961953520538aefa961ed1f87897da570d0dcd7b7075a4c9933e20"
+    },
+    {
+     "positionId": {
+      "__bigint": "48435"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "833390"
+     },
+     "openedAtMs": 1791661160000,
+     "intentId": "0x680b0c850facfdee7d0568ff3347d8684f3a57f184f978fc0d23afeca0feb238"
+    },
+    {
+     "positionId": {
+      "__bigint": "48379"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "827537"
+     },
+     "openedAtMs": 1791661150000,
+     "intentId": "0xbcb26bbd1f0778cd56404f043aaa93d7360a90d2c822f5c2d93ee7440b07e5f8"
+    },
+    {
+     "positionId": {
+      "__bigint": "48365"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830465"
+     },
+     "marginRaw": {
+      "__bigint": "40000000000000000000000"
+     },
+     "leverage": 250,
+     "bustPriceRaw": {
+      "__bigint": "827537"
+     },
+     "openedAtMs": 1791661149000,
+     "intentId": "0xe42de8b406853a042471dba384339eab2494407ab95ab79bf067a74dbbb4a88e"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x31ec17112e9b7b0da22cd562750b09e680b82131",
+   "accountRevision": 1,
+   "indexedThroughBlock": 48199026,
+   "walletRevision": 48195703,
+   "indexedThroughTimestamp": 1791665551,
+   "sessionKeys": {
+    "0xee7ee19640152a837e9a7308e3383ebc3b6a380a": {
+     "__bigint": "1794144995"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "83"
+   },
+   "balance": {
+    "__bigint": "102257507232817110860016"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "400000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "102257507232817110860016"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "335193368383721045022858"
+    },
+    "staked": {
+     "__bigint": "9890840728740427176518365"
+    },
+    "pendingBase": {
+     "__bigint": "403488189129336709120"
+    },
+    "rewardDebt": {
+     "__bigint": "80890882234600777637743"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "500048744185000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-41062920270944077352882"
+    },
+    "feesPaidRaw": {
+     "__bigint": "2267250976742270884066"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "330000000000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "43271683318761188212898"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "52387"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251295"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252430"
+     },
+     "openedAtMs": 1791662282000,
+     "intentId": "0xa2eb38b44afe45a29a180ecb29ece1c3aaca97cd5974b13c732b52a9e58a6c29"
+    },
+    {
+     "positionId": {
+      "__bigint": "52380"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251295"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250159"
+     },
+     "openedAtMs": 1791662281000,
+     "intentId": "0xa1c5bcb5d185d19dcb955cf09ae80b46d77506b0d0bd34522e34d49445c62b11"
+    },
+    {
+     "positionId": {
+      "__bigint": "52378"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251295"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252430"
+     },
+     "openedAtMs": 1791662280000,
+     "intentId": "0xe11f7300029704fee9c74defb72e14ca51647c959ef026381e8715003060e58c"
+    },
+    {
+     "positionId": {
+      "__bigint": "52370"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251295"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250159"
+     },
+     "openedAtMs": 1791662278000,
+     "intentId": "0xb735d1a3ced211467e061bfbc5cfec2071d4e5ad76cf9287e79ad646cced5e9d"
+    },
+    {
+     "positionId": {
+      "__bigint": "52367"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251305"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252440"
+     },
+     "openedAtMs": 1791662277000,
+     "intentId": "0x64c1741658cba6dd50a59273a627ab6630c04f111ea556cce2ded998545c9c38"
+    },
+    {
+     "positionId": {
+      "__bigint": "52364"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251305"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250169"
+     },
+     "openedAtMs": 1791662276000,
+     "intentId": "0xf2ae8a4ee5e1e5c0eda3c52539a591e5d134246ed0d9245408ea3f505c6cad18"
+    },
+    {
+     "positionId": {
+      "__bigint": "52361"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251305"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252440"
+     },
+     "openedAtMs": 1791662275000,
+     "intentId": "0xc9fa313315b4326b3fd7e2f2d9e0c634f1884fb0b061669074bff237e204bac4"
+    },
+    {
+     "positionId": {
+      "__bigint": "52356"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251305"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "250169"
+     },
+     "openedAtMs": 1791662274000,
+     "intentId": "0xd9f08374ef9ae6c10b4c9ed9d55c1f5f0d374c1c80dda97f6d9c99c95d252e3b"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0xb7602406102e5bc6058a69d8f86bc548058e779b",
+   "accountRevision": 198,
+   "indexedThroughBlock": 48197226,
+   "walletRevision": 48197226,
+   "indexedThroughTimestamp": 1791663780,
+   "sessionKeys": {
+    "0x4d098141281dc511a19eef504fbcb2c880182365": {
+     "__bigint": "1794248665"
+    },
+    "0x84862dd1027d7521f5c0c6234d366c312dbb273a": {
+     "__bigint": "1794248496"
+    },
+    "0xafd786779369ad03a0cfcd7821ebdbcb43451deb": {
+     "__bigint": "1794087849"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "667"
+   },
+   "balance": {
+    "__bigint": "133095538306221307149071"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "200000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "133095538306221307149071"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "50271189643060657259494193"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "437857249751056268584174"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "463652941001000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-391675791777641802332383"
+    },
+    "feesPaidRaw": {
+     "__bigint": "6702355307110634608128"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "1851950000000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "261118389082863109481454"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "56087"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "250139"
+     },
+     "openedAtMs": 1791663464000,
+     "intentId": "0xf8d36cdf5e9699c00694a342ed76b0a2f9f3dd0d97d31ee4bf7c0983dfd93317"
+    },
+    {
+     "positionId": {
+      "__bigint": "56086"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "250139"
+     },
+     "openedAtMs": 1791663464000,
+     "intentId": "0x69f3976e24609571bd3691486ef7190a3361ec2385c988481f97b800ca480d30"
+    },
+    {
+     "positionId": {
+      "__bigint": "56059"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "250139"
+     },
+     "openedAtMs": 1791663459000,
+     "intentId": "0x3cd0c7268af64378caf8d47401eddc26f8ead2692186def02924301255e47cba"
+    },
+    {
+     "positionId": {
+      "__bigint": "56058"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "250139"
+     },
+     "openedAtMs": 1791663459000,
+     "intentId": "0xe90f8f5eb46a4a4a26f4de9ebe47b6cd1851aac105b44a7351e453df8cec1cf4"
+    },
+    {
+     "positionId": {
+      "__bigint": "55840"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250975"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "251481"
+     },
+     "openedAtMs": 1791663311000,
+     "intentId": "0x5854d2a5cd8eb08cb04ee108d73be10b2f5521823e42bcf9092a8bc201f13219"
+    },
+    {
+     "positionId": {
+      "__bigint": "55062"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251065"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "251571"
+     },
+     "openedAtMs": 1791663070000,
+     "intentId": "0x349ef95d94c097ea89bd953c1da32b15b2c1ba782d55988ed5180a300a16f9d0"
+    },
+    {
+     "positionId": {
+      "__bigint": "55061"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251065"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "251571"
+     },
+     "openedAtMs": 1791663070000,
+     "intentId": "0x4511811fcc28ceac7aaf93f66eff382201ed1c7c523a7a83c76eeec817f81e90"
+    },
+    {
+     "positionId": {
+      "__bigint": "55060"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251065"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 400,
+     "bustPriceRaw": {
+      "__bigint": "251571"
+     },
+     "openedAtMs": 1791663070000,
+     "intentId": "0xe69ed7a198f943c0745a869858cd94ea98c6c560eb847797c40cdfdb2db70be1"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x39e4cc9e5dfa0f7f5ea39ec2be1fcf0618848f3f",
+   "accountRevision": 1,
+   "indexedThroughBlock": 48199027,
+   "walletRevision": 48195151,
+   "indexedThroughTimestamp": 1791665552,
+   "sessionKeys": {
+    "0x305c84937e937b610a53c8d5f38523ffc06d3fb4": {
+     "__bigint": "1794232264"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "203"
+   },
+   "balance": {
+    "__bigint": "5878078800418878347671"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "763636363636000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "5878078800418878347671"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "11057583275365143735384853"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "92091156927721030895592"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "806084751010000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-59577458214604355250210"
+    },
+    "feesPaidRaw": {
+     "__bigint": "2606191899856322495285"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "533761939975760000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "23007149641023233597881"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "48769"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251625"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "254019"
+     },
+     "openedAtMs": 1791661306000,
+     "intentId": "0x3808e748c851fb415ab8e6333b640e2735665d534794c2864ae0bf801098e8f0"
+    },
+    {
+     "positionId": {
+      "__bigint": "48768"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251625"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "254019"
+     },
+     "openedAtMs": 1791661306000,
+     "intentId": "0x2fb5abb6edc3b8419b7a1f48a30a4875f2d389c7c20aba4152d6fd32f2ed8ed8"
+    },
+    {
+     "positionId": {
+      "__bigint": "48767"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251625"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "249228"
+     },
+     "openedAtMs": 1791661304000,
+     "intentId": "0x313c0b20ebda6e25703a5ad2452400fbd367850aca5f2bf4064c983261007117"
+    },
+    {
+     "positionId": {
+      "__bigint": "48766"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251625"
+     },
+     "marginRaw": {
+      "__bigint": "100000000000000000000000"
+     },
+     "leverage": 100,
+     "bustPriceRaw": {
+      "__bigint": "249228"
+     },
+     "openedAtMs": 1791661304000,
+     "intentId": "0x72ac60f08dd16f67cd6cb58a9fb62ce8b7af67d9aeba44bb75cec4e128b14dee"
+    },
+    {
+     "positionId": {
+      "__bigint": "34672"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830275"
+     },
+     "marginRaw": {
+      "__bigint": "90909090909000000000000"
+     },
+     "leverage": 110,
+     "bustPriceRaw": {
+      "__bigint": "837424"
+     },
+     "openedAtMs": 1791656392000,
+     "intentId": "0xe371674e534b52281847c022b7b1a0dd9ad3687f2b0c8517f489845226810f70"
+    },
+    {
+     "positionId": {
+      "__bigint": "34670"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830275"
+     },
+     "marginRaw": {
+      "__bigint": "90909090909000000000000"
+     },
+     "leverage": 110,
+     "bustPriceRaw": {
+      "__bigint": "837424"
+     },
+     "openedAtMs": 1791656392000,
+     "intentId": "0x9815c0528987e88e303a66ca612978541265c5b5c9355d526a250a90b8e45899"
+    },
+    {
+     "positionId": {
+      "__bigint": "34668"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830275"
+     },
+     "marginRaw": {
+      "__bigint": "90909090909000000000000"
+     },
+     "leverage": 110,
+     "bustPriceRaw": {
+      "__bigint": "823119"
+     },
+     "openedAtMs": 1791656392000,
+     "intentId": "0x7a145a5b4669806878c84db298a60209695548644114f7baabbbadafc753723c"
+    },
+    {
+     "positionId": {
+      "__bigint": "34665"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830275"
+     },
+     "marginRaw": {
+      "__bigint": "90909090909000000000000"
+     },
+     "leverage": 110,
+     "bustPriceRaw": {
+      "__bigint": "823119"
+     },
+     "openedAtMs": 1791656390000,
+     "intentId": "0x7fee861b806bf9974e76a7bb4f73e6afcad4a8104be138c991d12469c87875ba"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x0f722b69e709bc904999878364ffba07f426a669",
+   "accountRevision": 42,
+   "indexedThroughBlock": 48196437,
+   "walletRevision": 48196437,
+   "indexedThroughTimestamp": 1791663004,
+   "sessionKeys": {
+    "0x43c92425e7d91daf4ba8fe4b4ad23a1f0f503fb5": {
+     "__bigint": "1794188358"
+    },
+    "0xec79f93ff81365228fce2c0137414eda893a71fa": {
+     "__bigint": "1794100973"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "235"
+   },
+   "balance": {
+    "__bigint": "1055197070529261586053234"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "428158299544786046605131"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "1055197070529261586053234"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "16611339266411011049405446"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "144683174946039098295992"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "1500999000000000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-108731986475886225029079"
+    },
+    "feesPaidRaw": {
+     "__bigint": "2357179135603342915487"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "739534345414111074653493150"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "91088356549933857687444"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "48690"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251835"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252973"
+     },
+     "openedAtMs": 1791661272000,
+     "intentId": "0xc446f5b1f65d8ff602e36b4fc3cab465c9ffe632eb7879d8bdb39344d0bb740f"
+    },
+    {
+     "positionId": {
+      "__bigint": "48689"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "251835"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "252973"
+     },
+     "openedAtMs": 1791661272000,
+     "intentId": "0x60103f49c7a6577beb91fb3e4c8033e68b36b28934c4024015b9deebc5015c49"
+    },
+    {
+     "positionId": {
+      "__bigint": "27824"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830915"
+     },
+     "marginRaw": {
+      "__bigint": "57142857142857142857142"
+     },
+     "leverage": 175,
+     "bustPriceRaw": {
+      "__bigint": "835266"
+     },
+     "openedAtMs": 1791653988000,
+     "intentId": "0xbced768bb0e9ba6371366e868f9016d9c7b0e583c6bdae4171e99c9360dc7bfa"
+    },
+    {
+     "positionId": {
+      "__bigint": "27823"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830915"
+     },
+     "marginRaw": {
+      "__bigint": "57142857142857142857142"
+     },
+     "leverage": 175,
+     "bustPriceRaw": {
+      "__bigint": "835266"
+     },
+     "openedAtMs": 1791653988000,
+     "intentId": "0xa22146ad4a84b576afc5c40b870f2e47d39e3573909242c62c8aaf2ac6886887"
+    },
+    {
+     "positionId": {
+      "__bigint": "19213"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250375"
+     },
+     "marginRaw": {
+      "__bigint": "49689434811172383587818"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "249243"
+     },
+     "openedAtMs": 1791649932000,
+     "intentId": "0x42202a744dbb5c41560eb02552146749385a0f9bb88f5dbe7fff0ab716e9886d"
+    },
+    {
+     "positionId": {
+      "__bigint": "18801"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250375"
+     },
+     "marginRaw": {
+      "__bigint": "50000000000000000000000"
+     },
+     "leverage": 200,
+     "bustPriceRaw": {
+      "__bigint": "249243"
+     },
+     "openedAtMs": 1791649755000,
+     "intentId": "0x09d13a95caddfed7aa72c2998faca088a3761733f183b34c267e328d32c039bd"
+    },
+    {
+     "positionId": {
+      "__bigint": "15625"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "829285"
+     },
+     "marginRaw": {
+      "__bigint": "57040293305042234445887"
+     },
+     "leverage": 175,
+     "bustPriceRaw": {
+      "__bigint": "824939"
+     },
+     "openedAtMs": 1791648485000,
+     "intentId": "0x0b07200e5a357ba28504be1c6fab87c9a171938597d32d7f4e596ecc3fabc51b"
+    },
+    {
+     "positionId": {
+      "__bigint": "15623"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "829285"
+     },
+     "marginRaw": {
+      "__bigint": "57142857142857142857142"
+     },
+     "leverage": 175,
+     "bustPriceRaw": {
+      "__bigint": "824939"
+     },
+     "openedAtMs": 1791648485000,
+     "intentId": "0xf3233962c33f5c955623776eaf97d3d8bf88228bec8ac27403d1e3844eda59d3"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x0c80eefc566985bf8491d784c214e77a9022870a",
+   "accountRevision": 1,
+   "indexedThroughBlock": 48199027,
+   "walletRevision": 48197431,
+   "indexedThroughTimestamp": 1791665552,
+   "sessionKeys": {
+    "0xa26ca16e4b8991a85c4b1923360015dffaef2e41": {
+     "__bigint": "1792206941"
+    },
+    "0xdcd5a087f190d17d63110a36ecb51e40078e00d8": {
+     "__bigint": "1794198248"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "311"
+   },
+   "balance": {
+    "__bigint": "21612594867736738871018"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "240000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "21612594867736738871018"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "201248179"
+    },
+    "staked": {
+     "__bigint": "28898040248903413272791166"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "251699164400554520204108"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "304636538072000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-122994463389261148686148"
+    },
+    "feesPaidRaw": {
+     "__bigint": "7676522436539725857811"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "624799000000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "79970520184997887557166"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "56189"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250705"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "251419"
+     },
+     "openedAtMs": 1791663481000,
+     "intentId": "0x45bb06b55da0745c830ebe26df20c1ac7e7b3063aaf9fbde72c432a5288ad376"
+    },
+    {
+     "positionId": {
+      "__bigint": "56188"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250705"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "249990"
+     },
+     "openedAtMs": 1791663481000,
+     "intentId": "0x179fcc1239afebb7643925ec91a7848bff2696d15c75896765e40b4263efa453"
+    },
+    {
+     "positionId": {
+      "__bigint": "56174"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "249930"
+     },
+     "openedAtMs": 1791663478000,
+     "intentId": "0x51e6c185bc8c4c5db6084550ea18137f0edd4341fde45e35d91dc5bbddf330a0"
+    },
+    {
+     "positionId": {
+      "__bigint": "56173"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "251359"
+     },
+     "openedAtMs": 1791663478000,
+     "intentId": "0x1b105d4a2ddfa8397e0d97d3e8280dcb77e9a408d7d0f03082a439ead7577e65"
+    },
+    {
+     "positionId": {
+      "__bigint": "56172"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "251359"
+     },
+     "openedAtMs": 1791663478000,
+     "intentId": "0xac3363181113ea439b36bc5e857b065c6022acf32dc7f9dac18b23003b4e1af5"
+    },
+    {
+     "positionId": {
+      "__bigint": "56171"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250645"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "249930"
+     },
+     "openedAtMs": 1791663478000,
+     "intentId": "0x65deb63b573da744bba5b9a60069a4540bdc3e2f22214dcbac956213b3f78fbe"
+    },
+    {
+     "positionId": {
+      "__bigint": "56160"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250615"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "251329"
+     },
+     "openedAtMs": 1791663475000,
+     "intentId": "0xc633a7063b87801ee7e0d7f75b1a4e07e4f208c5e4a5513212de83251ccc7b4d"
+    },
+    {
+     "positionId": {
+      "__bigint": "56159"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250615"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "249900"
+     },
+     "openedAtMs": 1791663475000,
+     "intentId": "0x0ad8b0f1576f7540a6496e04d458cad9839ff27918f591bb327cfc1188029ce9"
+    },
+    {
+     "positionId": {
+      "__bigint": "56158"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250615"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "251329"
+     },
+     "openedAtMs": 1791663475000,
+     "intentId": "0x6f607358d43306edc0cb6e5ba7f6e63ec479a152e8381f101803748b222707bb"
+    },
+    {
+     "positionId": {
+      "__bigint": "56157"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250615"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "249900"
+     },
+     "openedAtMs": 1791663475000,
+     "intentId": "0xa4028452577bc692b441f726cfb4d206c33430f4a68336f1e47c8e7476cf182a"
+    },
+    {
+     "positionId": {
+      "__bigint": "56156"
+     },
+     "instrumentId": 1,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250615"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "249900"
+     },
+     "openedAtMs": 1791663475000,
+     "intentId": "0xadb8a1aef5b83a754f174dbdb814632d130fe401ec09d21d3ba4c447730b82cb"
+    },
+    {
+     "positionId": {
+      "__bigint": "56155"
+     },
+     "instrumentId": 1,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "250615"
+     },
+     "marginRaw": {
+      "__bigint": "20000000000000000000000"
+     },
+     "leverage": 300,
+     "bustPriceRaw": {
+      "__bigint": "251329"
+     },
+     "openedAtMs": 1791663475000,
+     "intentId": "0x01b43282155a86babd8ebb0ed716c88428507882b15f6a5d984dc20acea819c4"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  },
+  {
+   "address": "0x493ee7f6e3a4fe66a5d7663ef7ad66d1c4a2d0cd",
+   "accountRevision": 1,
+   "indexedThroughBlock": 48198920,
+   "walletRevision": 48198621,
+   "indexedThroughTimestamp": 1791665447,
+   "sessionKeys": {
+    "0x9a2fbc310aef0bcbb41eb7b575c98cdb089b5cf3": {
+     "__bigint": "1794217212"
+    }
+   },
+   "queueRevision": {
+    "__bigint": "337"
+   },
+   "balance": {
+    "__bigint": "544759055159281629484"
+   },
+   "queued": {
+    "__bigint": "0"
+   },
+   "locked": {
+    "__bigint": "264000000000000000000000"
+   },
+   "funds": {
+    "reservedBalance": {
+     "__bigint": "0"
+    },
+    "reservedQueued": {
+     "__bigint": "0"
+    },
+    "availableBalance": {
+     "__bigint": "544759055159281629484"
+    },
+    "availableQueued": {
+     "__bigint": "0"
+    }
+   },
+   "queueNodeCount": 0,
+   "consumableDebt": {
+    "__bigint": "0"
+   },
+   "paper": {
+    "balance": {
+     "__bigint": "0"
+    },
+    "staked": {
+     "__bigint": "21253453532476685209807789"
+    },
+    "pendingBase": {
+     "__bigint": "0"
+    },
+    "rewardDebt": {
+     "__bigint": "185115545852746559509807"
+    }
+   },
+   "lifetime": {
+    "depositedRaw": {
+     "__bigint": "223998800000000000000000"
+    },
+    "withdrawnRaw": {
+     "__bigint": "0"
+    },
+    "realizedPnlRaw": {
+     "__bigint": "-91123965886011684458448"
+    },
+    "feesPaidRaw": {
+     "__bigint": "3666016769165117967088"
+    },
+    "tradedNotionalRaw": {
+     "__bigint": "732580000000000000000000000"
+    },
+    "paperRewardsClaimedRaw": {
+     "__bigint": "131669924941170966087932"
+    }
+   },
+   "positions": [
+    {
+     "positionId": {
+      "__bigint": "61367"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "32000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "833312"
+     },
+     "openedAtMs": 1791665101000,
+     "intentId": "0x2edbb6dc0f00cb90130fd01404840ccba2779d03b30d8bed01d07a34028965a8"
+    },
+    {
+     "positionId": {
+      "__bigint": "61363"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830235"
+     },
+     "marginRaw": {
+      "__bigint": "32000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "827155"
+     },
+     "openedAtMs": 1791665099000,
+     "intentId": "0x4b2daa706dfbdcabf14d0c2c421172cf91db6fa43a92c0cb3d10c81be014d086"
+    },
+    {
+     "positionId": {
+      "__bigint": "51463"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830295"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "833373"
+     },
+     "openedAtMs": 1791662062000,
+     "intentId": "0xdad97cdd3f0c076d931d92501f84d5d8b8e856468a671512bd86da4000a78b72"
+    },
+    {
+     "positionId": {
+      "__bigint": "51443"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830295"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "827214"
+     },
+     "openedAtMs": 1791662058000,
+     "intentId": "0xe1a6cf0d0bbd1ac33181d954820b12e78bcc66261731dacdeb3f9640dddf2a44"
+    },
+    {
+     "positionId": {
+      "__bigint": "51437"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830315"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "833393"
+     },
+     "openedAtMs": 1791662056000,
+     "intentId": "0xeae920215812104efc40376b12f98745612a7cd20cfbd4d4b6147b031db657fe"
+    },
+    {
+     "positionId": {
+      "__bigint": "51436"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830315"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "827234"
+     },
+     "openedAtMs": 1791662056000,
+     "intentId": "0x34c5d6aac231741934d0889e62a07e33031f7abd5c46491f8b0d95251bbad35b"
+    },
+    {
+     "positionId": {
+      "__bigint": "51414"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830315"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "833393"
+     },
+     "openedAtMs": 1791662050000,
+     "intentId": "0xd3b8e1a4af0b1d3f142eb889710ab2b3cc934f225c93ee395d7deda6df2b1a80"
+    },
+    {
+     "positionId": {
+      "__bigint": "51404"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830315"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "827234"
+     },
+     "openedAtMs": 1791662049000,
+     "intentId": "0xa4417009c6758c1facf4a499f9e81bfae6b7d6bdd358cfa39b94aa818fcbd6c2"
+    },
+    {
+     "positionId": {
+      "__bigint": "51390"
+     },
+     "instrumentId": 0,
+     "isLong": false,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830315"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "833393"
+     },
+     "openedAtMs": 1791662047000,
+     "intentId": "0x3003baaaad168e52c9d96e0acbbc212053976ebe05e69a800581d466bf6d5287"
+    },
+    {
+     "positionId": {
+      "__bigint": "51383"
+     },
+     "instrumentId": 0,
+     "isLong": true,
+     "useDebt": false,
+     "entryPriceRaw": {
+      "__bigint": "830315"
+     },
+     "marginRaw": {
+      "__bigint": "25000000000000000000000"
+     },
+     "leverage": 239,
+     "bustPriceRaw": {
+      "__bigint": "827234"
+     },
+     "openedAtMs": 1791662045000,
+     "intentId": "0x70a8d0f2302d23e530940fbc510b1dac3782dd57180dbafe95871faf0e47b17a"
+    }
+   ],
+   "operations": [],
+   "closedPositions": [],
+   "intentOutcomes": []
+  }
+ ],
+ "liqMaps": {
+  "1": {
+   "ok": true,
+   "instrumentId": 0,
+   "range": "1",
+   "fromRaw": "822096",
+   "toRaw": "838704",
+   "priceScale": "10",
+   "source": {
+    "block": "48199027",
+    "at": 1791665552000,
+    "priceAt": 1791665548999
+   },
+   "buckets": [
+    [
+     "4247758000000000000000000",
+     "0",
+     15,
+     0
+    ],
+    [
+     "4588500000000000000000000",
+     "0",
+     11,
+     0
+    ],
+    [
+     "27909368137800000000000000",
+     "0",
+     17,
+     0
+    ],
+    [
+     "55204578080000000000000000",
+     "0",
+     35,
+     0
+    ],
+    [
+     "31497606541239931415064400",
+     "0",
+     34,
+     0
+    ],
+    [
+     "6419482940500000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "400000000000000000000000",
+     "0",
+     1,
+     0
+    ],
+    [
+     "1537620000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "10011400000000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "20033500999980000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "10605000000000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "11324800000000000000000000",
+     "0",
+     5,
+     0
+    ],
+    [
+     "15559856000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "112810000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "37090000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "10155250100000000000000000",
+     "0",
+     5,
+     0
+    ],
+    [
+     "10980000000000000000000",
+     "0",
+     1,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "10041283717750000000000000",
+     "0",
+     5,
+     0
+    ],
+    [
+     "1593326000000000000000000",
+     "0",
+     5,
+     0
+    ],
+    [
+     "31163757225948391028030075",
+     "0",
+     6,
+     0
+    ],
+    [
+     "5169085970000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "455000000000000000000000",
+     "0",
+     1,
+     0
+    ],
+    [
+     "1616480000000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "24072023824052701368014300",
+     "0",
+     6,
+     0
+    ],
+    [
+     "389497300000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "17398000000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "21133890190000000000000000",
+     "0",
+     8,
+     0
+    ],
+    [
+     "14655125000000000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "651733000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "10619500000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "18681320021800000000000000",
+     "0",
+     24,
+     0
+    ],
+    [
+     "845550000000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "4850367940000000000000000",
+     "0",
+     10,
+     0
+    ],
+    [
+     "9877912998600000000000000",
+     "0",
+     16,
+     0
+    ],
+    [
+     "37227350000000000000000000",
+     "0",
+     14,
+     0
+    ],
+    [
+     "33869102600000000000000000",
+     "0",
+     14,
+     0
+    ],
+    [
+     "10188098250000000000000000",
+     "0",
+     10,
+     0
+    ],
+    [
+     "67094743127894000000000000",
+     "0",
+     14,
+     0
+    ],
+    [
+     "3253561960000000000000000",
+     "0",
+     14,
+     0
+    ],
+    [
+     "178785604000000007864320000",
+     "0",
+     26,
+     0
+    ],
+    [
+     "46549923000000000000000000",
+     "0",
+     11,
+     0
+    ],
+    [
+     "1694129723250000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "7512728461350000000000000",
+     "0",
+     13,
+     0
+    ],
+    [
+     "50950301960000000000000000",
+     "0",
+     16,
+     0
+    ],
+    [
+     "6710272660000000000000000",
+     "0",
+     9,
+     0
+    ],
+    [
+     "23825971436200000000000000",
+     "0",
+     10,
+     0
+    ],
+    [
+     "34032209793280000000000000",
+     "0",
+     16,
+     0
+    ],
+    [
+     "69595566474308634257307776",
+     "0",
+     15,
+     0
+    ],
+    [
+     "10616535500000000000000000",
+     "0",
+     9,
+     0
+    ],
+    [
+     "13523480000000000000000000",
+     "0",
+     9,
+     0
+    ],
+    [
+     "2600214274020948678484736",
+     "0",
+     13,
+     0
+    ],
+    [
+     "13179516000000000000000000",
+     "0",
+     10,
+     0
+    ],
+    [
+     "14551660739000000000000000",
+     "0",
+     27,
+     0
+    ],
+    [
+     "140017216563259811134592375",
+     "0",
+     44,
+     0
+    ],
+    [
+     "119949247838769782975766000",
+     "0",
+     40,
+     0
+    ],
+    [
+     "53670552102000000000000000",
+     "0",
+     37,
+     0
+    ],
+    [
+     "107380926273500000000000000",
+     "0",
+     51,
+     0
+    ],
+    [
+     "25835820742675019753613000",
+     "0",
+     36,
+     0
+    ],
+    [
+     "11064218993652501797529450",
+     "0",
+     36,
+     0
+    ],
+    [
+     "30370272770000000000000000",
+     "0",
+     74,
+     0
+    ],
+    [
+     "51020552220000000000000000",
+     "0",
+     397,
+     0
+    ],
+    [
+     "21130624330000000000000000",
+     "0",
+     79,
+     0
+    ],
+    [
+     "32914639158681443206000000",
+     "0",
+     149,
+     0
+    ],
+    [
+     "25811178500000000000000000",
+     "0",
+     138,
+     0
+    ],
+    [
+     "70688440000000000000000000",
+     "0",
+     126,
+     0
+    ],
+    [
+     "80000000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "4861460000000000000000000",
+     0,
+     8
+    ],
+    [
+     "0",
+     "19563831019000000000000000",
+     0,
+     107
+    ],
+    [
+     "0",
+     "10837900700000000000000000",
+     0,
+     73
+    ],
+    [
+     "0",
+     "68308079848089003260000000",
+     0,
+     162
+    ],
+    [
+     "0",
+     "34491955000000000000000000",
+     0,
+     106
+    ],
+    [
+     "0",
+     "1523594000000000000000000",
+     0,
+     11
+    ],
+    [
+     "0",
+     "61782361119759811160806775",
+     0,
+     33
+    ],
+    [
+     "0",
+     "28230812682500000000000000",
+     0,
+     21
+    ],
+    [
+     "0",
+     "118520794938924782975766000",
+     0,
+     53
+    ],
+    [
+     "0",
+     "631354640000000000000000",
+     0,
+     5
+    ],
+    [
+     "0",
+     "26219360255500000000000000",
+     0,
+     20
+    ],
+    [
+     "0",
+     "63769900592172521551142450",
+     0,
+     25
+    ],
+    [
+     "0",
+     "14313063164000000000000000",
+     0,
+     17
+    ],
+    [
+     "0",
+     "10137280000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "12667332149999999973785600",
+     0,
+     8
+    ],
+    [
+     "0",
+     "30799999999999999999999088",
+     0,
+     5
+    ],
+    [
+     "0",
+     "13867363084308634257308352",
+     0,
+     8
+    ],
+    [
+     "0",
+     "16735657000000000000000000",
+     0,
+     8
+    ],
+    [
+     "0",
+     "27112873541417000000000000",
+     0,
+     8
+    ],
+    [
+     "0",
+     "32147952613603948678484736",
+     0,
+     17
+    ],
+    [
+     "0",
+     "18228337435200000000000000",
+     0,
+     5
+    ],
+    [
+     "0",
+     "35671670000000000000000000",
+     0,
+     13
+    ],
+    [
+     "0",
+     "14472027000000000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "277250000000000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "32181014500000000000000000",
+     0,
+     10
+    ],
+    [
+     "0",
+     "21658346113250000000000000",
+     0,
+     10
+    ],
+    [
+     "0",
+     "25015772661250000000000000",
+     0,
+     13
+    ],
+    [
+     "0",
+     "68114548007894000000000000",
+     0,
+     12
+    ],
+    [
+     "0",
+     "20550000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "18727322021800000000000000",
+     0,
+     19
+    ],
+    [
+     "0",
+     "633562000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "20453318998600000000000000",
+     0,
+     18
+    ],
+    [
+     "0",
+     "151749573040000007864320000",
+     0,
+     23
+    ],
+    [
+     "0",
+     "117479841440000000000000000",
+     0,
+     23
+    ],
+    [
+     "0",
+     "6177406000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "17512010750000000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "570000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "12769907600000000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "9824758717750000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "1500000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "46450077097565999999999700",
+     0,
+     7
+    ],
+    [
+     "0",
+     "5365608000000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "4605000000000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "14134773924052701368014300",
+     0,
+     7
+    ],
+    [
+     "0",
+     "66000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "1500000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "30180500000000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "10107588160000000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "18625000000000000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "605000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "10000000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "5152000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "135870000000000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "455000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "7100000000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "32031294999980000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "11000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "1245657105223014959561600",
+     0,
+     6
+    ],
+    [
+     "0",
+     "12901803980760220049067500",
+     0,
+     42
+    ],
+    [
+     "0",
+     "12602944863766666666666600",
+     0,
+     5
+    ],
+    [
+     "0",
+     "1795045000000000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "16261641137800000000000000",
+     0,
+     11
+    ],
+    [
+     "0",
+     "2157232000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "83030475513829453210120000",
+     0,
+     42
+    ],
+    [
+     "0",
+     "20734846027410478204944400",
+     0,
+     11
+    ],
+    [
+     "0",
+     "1367482940500000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "410080000000000000000000",
+     0,
+     2
+    ]
+   ],
+   "below": [
+    "156670189204049901570438100",
+    "0",
+    350,
+    0
+   ],
+   "above": [
+    "0",
+    "100815005004299999895142400",
+    0,
+    234
+   ]
+  },
+  "0.5": {
+   "ok": true,
+   "instrumentId": 0,
+   "range": "0.5",
+   "fromRaw": "826248",
+   "toRaw": "834552",
+   "priceScale": "10",
+   "source": {
+    "block": "48199027",
+    "at": 1791665552000,
+    "priceAt": 1791665548999
+   },
+   "buckets": [
+    [
+     "615300000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "1779450000000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "3070917940000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "9569015498600000000000000",
+     "0",
+     12,
+     0
+    ],
+    [
+     "308897500000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "26597450000000000000000000",
+     "0",
+     9,
+     0
+    ],
+    [
+     "10629900000000000000000000",
+     "0",
+     5,
+     0
+    ],
+    [
+     "12442196600000000000000000",
+     "0",
+     8,
+     0
+    ],
+    [
+     "21426906000000000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "33061040000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "10155037210000000000000000",
+     "0",
+     8,
+     0
+    ],
+    [
+     "36564700000000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "30530043127894000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "1896650000000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "1356911960000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "20136104000000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "158649500000000007864320000",
+     "0",
+     22,
+     0
+    ],
+    [
+     "36127100000000000000000000",
+     "0",
+     8,
+     0
+    ],
+    [
+     "10422823000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "125063610000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "1569066113250000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "794563461250000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "6718165000100000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "49352000000000000000000000",
+     "0",
+     10,
+     0
+    ],
+    [
+     "1598301960000000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "5098000000000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "1612272660000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "3747000000000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "20078971436200000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "31638009793280000000000000",
+     "0",
+     13,
+     0
+    ],
+    [
+     "2394200000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "61075099999999999999999088",
+     "0",
+     10,
+     0
+    ],
+    [
+     "8520466474308634257308688",
+     "0",
+     5,
+     0
+    ],
+    [
+     "604087500000000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "10012448000000000000000000",
+     "0",
+     2,
+     0
+    ],
+    [
+     "12430370000000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "1093110000000000000000000",
+     "0",
+     5,
+     0
+    ],
+    [
+     "1328734541417000000000000",
+     "0",
+     7,
+     0
+    ],
+    [
+     "1271479732603948678484736",
+     "0",
+     6,
+     0
+    ],
+    [
+     "2199516000000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "10980000000000000000000000",
+     "0",
+     6,
+     0
+    ],
+    [
+     "9311685000000000000000000",
+     "0",
+     4,
+     0
+    ],
+    [
+     "5239975739000000000000000",
+     "0",
+     23,
+     0
+    ],
+    [
+     "48312715269999999973785600",
+     "0",
+     22,
+     0
+    ],
+    [
+     "91704501293259811160806775",
+     "0",
+     22,
+     0
+    ],
+    [
+     "14250817284907865731427500",
+     "0",
+     11,
+     0
+    ],
+    [
+     "105698430553861917244338500",
+     "0",
+     29,
+     0
+    ],
+    [
+     "19085781000000000000000000",
+     "0",
+     17,
+     0
+    ],
+    [
+     "34584771102000000000000000",
+     "0",
+     20,
+     0
+    ],
+    [
+     "67819694793500000000000000",
+     "0",
+     39,
+     0
+    ],
+    [
+     "39561231480000000000000000",
+     "0",
+     12,
+     0
+    ],
+    [
+     "18371261242520019753613000",
+     "0",
+     25,
+     0
+    ],
+    [
+     "7464559500155000000000000",
+     "0",
+     11,
+     0
+    ],
+    [
+     "8317784568000000000000000",
+     "0",
+     22,
+     0
+    ],
+    [
+     "2746434425652501797529450",
+     "0",
+     14,
+     0
+    ],
+    [
+     "13084787000000000000000000",
+     "0",
+     24,
+     0
+    ],
+    [
+     "17285485770000000000000000",
+     "0",
+     50,
+     0
+    ],
+    [
+     "32112816960000000000000000",
+     "0",
+     309,
+     0
+    ],
+    [
+     "18907735260000000000000000",
+     "0",
+     88,
+     0
+    ],
+    [
+     "6161165810000000000000000",
+     "0",
+     47,
+     0
+    ],
+    [
+     "14969458520000000000000000",
+     "0",
+     32,
+     0
+    ],
+    [
+     "31464684158681443206000000",
+     "0",
+     134,
+     0
+    ],
+    [
+     "1449955000000000000000000",
+     "0",
+     15,
+     0
+    ],
+    [
+     "13311671000000000000000000",
+     "0",
+     56,
+     0
+    ],
+    [
+     "12499507500000000000000000",
+     "0",
+     82,
+     0
+    ],
+    [
+     "16051940000000000000000000",
+     "0",
+     36,
+     0
+    ],
+    [
+     "54636500000000000000000000",
+     "0",
+     90,
+     0
+    ],
+    [
+     "80000000000000000000000",
+     "0",
+     3,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "4220500000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "640960000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "17585011019000000000000000",
+     0,
+     49
+    ],
+    [
+     "0",
+     "1978820000000000000000000",
+     0,
+     58
+    ],
+    [
+     "0",
+     "5067860700000000000000000",
+     0,
+     61
+    ],
+    [
+     "0",
+     "5770040000000000000000000",
+     0,
+     12
+    ],
+    [
+     "0",
+     "12686466848089003260000000",
+     0,
+     30
+    ],
+    [
+     "0",
+     "55621613000000000000000000",
+     0,
+     132
+    ],
+    [
+     "0",
+     "5342661000000000000000000",
+     0,
+     34
+    ],
+    [
+     "0",
+     "29149294000000000000000000",
+     0,
+     72
+    ],
+    [
+     "0",
+     "1085660000000000000000000",
+     0,
+     5
+    ],
+    [
+     "0",
+     "437934000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "52318658991759811160806775",
+     0,
+     17
+    ],
+    [
+     "0",
+     "9463702128000000000000000",
+     0,
+     16
+    ],
+    [
+     "0",
+     "16010677819000000000000000",
+     0,
+     12
+    ],
+    [
+     "0",
+     "12220134863500000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "17947717785062865731427500",
+     0,
+     22
+    ],
+    [
+     "0",
+     "100573077153861917244338500",
+     0,
+     31
+    ],
+    [
+     "0",
+     "548668102000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "82686538000000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "3636050255500000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "22583310000000000000000000",
+     0,
+     14
+    ],
+    [
+     "0",
+     "60620108406672521551142450",
+     0,
+     18
+    ],
+    [
+     "0",
+     "3149792185500000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "9102542664000000000000000",
+     0,
+     13
+    ],
+    [
+     "0",
+     "5210520500000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "5337280000000000000000000",
+     0,
+     5
+    ],
+    [
+     "0",
+     "4800000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "298772150000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "12368559999999999973785600",
+     0,
+     4
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "30799999999999999999999088",
+     0,
+     5
+    ],
+    [
+     "0",
+     "12604656474308634257308352",
+     0,
+     4
+    ],
+    [
+     "0",
+     "1262706610000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "16577557000000000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "158100000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "15598000000000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "11514873541417000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "11622214178803948678484736",
+     0,
+     8
+    ],
+    [
+     "0",
+     "20525738434800000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "75705650000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "18152631785200000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "14908160000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "20763510000000000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "14366027000000000000000000",
+     0,
+     8
+    ],
+    [
+     "0",
+     "106000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "30000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "247250000000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "10000000000000000000000000",
+     0,
+     1
+    ],
+    [
+     "0",
+     "22181014500000000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "10023000000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "11635346113250000000000000",
+     0,
+     8
+    ],
+    [
+     "0",
+     "8332168961250000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "16683603700000000000000000",
+     0,
+     6
+    ],
+    [
+     "0",
+     "58196104880000000000000000",
+     0,
+     10
+    ],
+    [
+     "0",
+     "9918443127894000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "20550000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "17693522021800000000000000",
+     0,
+     12
+    ],
+    [
+     "0",
+     "1033800000000000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "246982000000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "386580000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "10501862500000000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "9951456498600000000000000",
+     0,
+     9
+    ],
+    [
+     "0",
+     "1889512000000000000000000",
+     0,
+     7
+    ],
+    [
+     "0",
+     "149860061040000007864320000",
+     0,
+     16
+    ],
+    [
+     "0",
+     "97297841440000000000000000",
+     0,
+     15
+    ],
+    [
+     "0",
+     "20182000000000000000000000",
+     0,
+     8
+    ],
+    [
+     "0",
+     "1113000000000000000000000",
+     0,
+     2
+    ],
+    [
+     "0",
+     "5064406000000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "0",
+     0,
+     0
+    ],
+    [
+     "0",
+     "14159885750000000000000000",
+     0,
+     4
+    ],
+    [
+     "0",
+     "3352125000000000000000000",
+     0,
+     3
+    ],
+    [
+     "0",
+     "570000000000000000000000",
+     0,
+     1
+    ]
+   ],
+   "below": [
+    "524196062253120925381546875",
+    "0",
+    583,
+    0
+   ],
+   "above": [
+    "0",
+    "463941592072938534353516500",
+    0,
+    433
+   ]
+  }
+ },
+ "board7": {
+  "ok": true,
+  "count": 13491,
+  "summary": {
+   "uniqueAccounts": 13491,
+   "trackedBalance": "67993001781793609218204620",
+   "trackedQueued": "0",
+   "trackedOpenNotional": "7784208239035740584366251829",
+   "trackedPaper": "4642119331708274471196080031"
+  },
+  "accounts": [
+   {
+    "address": "0xf6ecdf3700abfe1ec460fa656c33976f70850b33",
+    "leaderboardName": null,
+    "realizedPnl": "57009441214744801237584",
+    "totalWindowedPnl": "58009981496407817247312",
+    "totalVolume": "13836100000000000000000000",
+    "lastActiveTs": 1791665519,
+    "currentBalance": "70508441214744801237584",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 2,
+    "currentOpenNotional": "3846100000000000000000000",
+    "currentUnrealizedPnl": "1000540281663016009728",
+    "paperTotal": "0",
+    "_leaderboardRank": 6
+   },
+   {
+    "address": "0x41cd92065f8bea45531e237006cbfdc8067160ee",
+    "leaderboardName": null,
+    "realizedPnl": "49984949559688419314458",
+    "totalWindowedPnl": "56516794111137802324762",
+    "totalVolume": "114000000000000000000000000",
+    "lastActiveTs": 1791663540,
+    "currentBalance": "31471242935919194454153",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 1,
+    "currentOpenNotional": "10000000000000000000000000",
+    "currentUnrealizedPnl": "6531844551449383010304",
+    "paperTotal": "1907340155044932737556294",
+    "_leaderboardRank": 7
+   },
+   {
+    "address": "0x0871deb34bfd2052b1c10dc4f6c0912a2a47e927",
+    "leaderboardName": "Paper Boy",
+    "realizedPnl": "-17673404314735765375987",
+    "totalWindowedPnl": "56468030275944495952909",
+    "totalVolume": "128725000000000000000000000",
+    "lastActiveTs": 1791665480,
+    "currentBalance": "30980087010916655864993",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 4,
+    "currentOpenNotional": "40000000000000000000000000",
+    "currentUnrealizedPnl": "74141434590680261328896",
+    "paperTotal": "5907898593653126417497594",
+    "_leaderboardRank": 8
+   },
+   {
+    "address": "0x136c0c8bb7ac0ce10a5afd6697b958573bdcb806",
+    "leaderboardName": null,
+    "realizedPnl": "52499155938445088464603",
+    "totalWindowedPnl": "49812214473962473594587",
+    "totalVolume": "12398967100000000000000000",
+    "lastActiveTs": 1791658216,
+    "currentBalance": "102467873563445088464603",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 1,
+    "currentOpenNotional": "2500000000000000000000000",
+    "currentUnrealizedPnl": "-2686941464482614870016",
+    "paperTotal": "0",
+    "_leaderboardRank": 9
+   },
+   {
+    "address": "0xcf803a49f6e37b92a4040e397b976939dc5d9841",
+    "leaderboardName": "prop",
+    "realizedPnl": "49233065608925169317112",
+    "totalWindowedPnl": "49233065608925169317112",
+    "totalVolume": "240100000000000000000000000",
+    "lastActiveTs": 1791660133,
+    "currentBalance": "68384146737713183846225",
+    "currentQueued": "0",
+    "currentOpenPositionCount": 0,
+    "currentOpenNotional": "0",
+    "currentUnrealizedPnl": "0",
+    "paperTotal": "1165867828595998274534238",
+    "_leaderboardRank": 10
+   }
+  ],
+  "pageInfo": {
+   "page": 1,
+   "totalPages": 2699
+  }
+ },
+ "trades": {
+  "0xf6ecdf3700abfe1ec460fa656c33976f70850b33": [
+   {
+    "timestampMs": 1791643288000,
+    "txHash": "0x105a9d3803c9aa5dbf41660fe907ac1998fc278bab3917f4af303d3c32519b08",
+    "positionId": "700",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "249675",
+    "marginRaw": "15000000000000000000000",
+    "leverage": 666,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641070000,
+    "exitPriceRaw": "251360",
+    "adjustedPnlRaw": "58172899198719184936310",
+    "userPaidFeeRaw": "1163457983974383698726",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   }
+  ],
+  "0x41cd92065f8bea45531e237006cbfdc8067160ee": [
+   {
+    "timestampMs": 1791663449000,
+    "txHash": "0x3388b0687942423dd31827d537b0c29180bcbf57906f0e8c80ef34b652a33e23",
+    "positionId": "47347",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "251535",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791660927000,
+    "exitPriceRaw": "250705",
+    "adjustedPnlRaw": "-32997395988629812948496",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "1475777235617940874405788",
+    "paperMintBasisRaw": "32337448068857216689527",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791660855000,
+    "txHash": "0xc5eda62503564d259b2d7b3ce7035aef0c4652963fb7014d65d52a1f273c5416",
+    "positionId": "39991",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "251015",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791658526000,
+    "exitPriceRaw": "251445",
+    "adjustedPnlRaw": "13120375341186483491025",
+    "userPaidFeeRaw": "262407506823729669820",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791658464000,
+    "txHash": "0x0139470fa2b31864c3794d3d2d9aa4ff388e9450ef77431430b42bd102e4b8fe",
+    "positionId": "28061",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "250775",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791654041000,
+    "exitPriceRaw": "251065",
+    "adjustedPnlRaw": "8245505716787314990927",
+    "userPaidFeeRaw": "164910114335746299818",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791653966000,
+    "txHash": "0xcea6d8eb2a20a12f0130125e155201aff0bb5e86c12a28a9ffc5f3702b77e881",
+    "positionId": "22609",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "250495",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791651878000,
+    "exitPriceRaw": "250735",
+    "adjustedPnlRaw": "6538556807605615466176",
+    "userPaidFeeRaw": "130771136152112309323",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791651780000,
+    "txHash": "0x09994e95c92f24b1df1d752fb55486050920e4911b6d7e6025d3b28f22b57934",
+    "positionId": "19750",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "250575",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791650286000,
+    "exitPriceRaw": "250435",
+    "adjustedPnlRaw": "3217013175214612252618",
+    "userPaidFeeRaw": "64340263504292245052",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791650242000,
+    "txHash": "0xff1a714374885dbd1fbb1b005200181b902c6b37652fed70d745a0c77a670916",
+    "positionId": "19263",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "250365",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791649959000,
+    "exitPriceRaw": "250595",
+    "adjustedPnlRaw": "6202145095898548256545",
+    "userPaidFeeRaw": "124042901917970965130",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791649888000,
+    "txHash": "0x20086136394244365480a88c8185298597104c2ef77a2e01eb4b88a429a9680d",
+    "positionId": "18603",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "250620",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791649551000,
+    "exitPriceRaw": "250445",
+    "adjustedPnlRaw": "4351632359526908410741",
+    "userPaidFeeRaw": "87032647190538168214",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791649371000,
+    "txHash": "0x5ccb0180da2138930e2d98e8f9131fd98302147ab22129bc432b1d474aba5c1e",
+    "positionId": "3768",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "250855",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791644080000,
+    "exitPriceRaw": "250715",
+    "adjustedPnlRaw": "-5580913276594048354627",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "384474889636605669232706",
+    "paperMintBasisRaw": "5469295011062167387535",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791643429000,
+    "txHash": "0x5f943a7f2a58b19ce7241d096d50b50d9b38822c8ddf15995fd51ca31324f6b6",
+    "positionId": "1472",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "249575",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641375000,
+    "exitPriceRaw": "251005",
+    "adjustedPnlRaw": "49076107085598327609976",
+    "userPaidFeeRaw": "981522141711966552199",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791641301000,
+    "txHash": "0x8a029a3f671db67b8fea126802299d406dc73161c56a7f6db5bdb9b44ea98eb3",
+    "positionId": "1155",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "249575",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 50,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641221000,
+    "exitPriceRaw": "249595",
+    "adjustedPnlRaw": "109632708808904374556",
+    "userPaidFeeRaw": "2192654176178087491",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791640965000,
+    "txHash": "0xdd5540c80af2473d84d635b8be9c76917a3624edd3ecb2ac7ce7b51f808c0268",
+    "positionId": "207",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "249745",
+    "marginRaw": "200000000000000000000000",
+    "leverage": 20,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791640917000,
+    "exitPriceRaw": "249715",
+    "adjustedPnlRaw": "-480490099901899937936",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "47088029790386193917800",
+    "paperMintBasisRaw": "470880297903861939178",
+    "paperMintBatchTotalRaw": null
+   }
+  ],
+  "0x0871deb34bfd2052b1c10dc4f6c0912a2a47e927": [
+   {
+    "timestampMs": 1791645121000,
+    "txHash": "0xc436f3bac3980b79359658e4167115fa59da213aea3495e161f67c3080ff4336",
+    "positionId": "489",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "827525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641025000,
+    "exitPriceRaw": "829675",
+    "adjustedPnlRaw": "21620788375684695322074",
+    "userPaidFeeRaw": "432415767513693906441",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791645113000,
+    "txHash": "0xfe9f7065edcbf3b3e89914619831c332397e9a079c0797855f64c99ebd9d232c",
+    "positionId": "624",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "827525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641060000,
+    "exitPriceRaw": "829675",
+    "adjustedPnlRaw": "21620788375684695322074",
+    "userPaidFeeRaw": "432415767513693906441",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791644727000,
+    "txHash": "0x01bc7efdecef5ab0bc06485ee5088a5a9a8800f1bca45ac896e5d5025bf7224b",
+    "positionId": "4391",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "829595",
+    "marginRaw": "8725000000000000000000",
+    "leverage": 1000,
+    "kind": "Liquidated",
+    "openedAtMs": 1791644323000,
+    "exitPriceRaw": "830115",
+    "adjustedPnlRaw": "-8725000000000000000000",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "783784142031720324082100",
+    "paperMintBasisRaw": "8725000000000000000000",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791643688000,
+    "txHash": "0x55eea15e4c8933b749960544f730753aab672c7e46c9a5b357430191b062eccb",
+    "positionId": "3105",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "830095",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791643558000,
+    "exitPriceRaw": "829985",
+    "adjustedPnlRaw": "-1325149531077768207253",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "124114451621406093415494",
+    "paperMintBasisRaw": "1298646540456212843108",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791642379000,
+    "txHash": "0xf3c124f0a63bebde53a52bafee96b64a26410825983c2df57c297704ce7a37f0",
+    "positionId": "679",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "827525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "Liquidated",
+    "openedAtMs": 1791641068000,
+    "exitPriceRaw": "828015",
+    "adjustedPnlRaw": "-10000000000000000000000",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "1000000000000000000000000",
+    "paperMintBasisRaw": "10000000000000000000000",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791642379000,
+    "txHash": "0xf3c124f0a63bebde53a52bafee96b64a26410825983c2df57c297704ce7a37f0",
+    "positionId": "555",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "827525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "Liquidated",
+    "openedAtMs": 1791641046000,
+    "exitPriceRaw": "828015",
+    "adjustedPnlRaw": "-10000000000000000000000",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "1000000000000000000000000",
+    "paperMintBasisRaw": "10000000000000000000000",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791642379000,
+    "txHash": "0xf3c124f0a63bebde53a52bafee96b64a26410825983c2df57c297704ce7a37f0",
+    "positionId": "545",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "827525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "Liquidated",
+    "openedAtMs": 1791641042000,
+    "exitPriceRaw": "828015",
+    "adjustedPnlRaw": "-10000000000000000000000",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "1000000000000000000000000",
+    "paperMintBasisRaw": "10000000000000000000000",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791641996000,
+    "txHash": "0xf821943d8811abf7d4ce068052e35d0eeb1bceaff18d96b8526261bcfcb8fce8",
+    "positionId": "597",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "249675",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "Liquidated",
+    "openedAtMs": 1791641056000,
+    "exitPriceRaw": "249825",
+    "adjustedPnlRaw": "-10000000000000000000000",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "1000000000000000000000000",
+    "paperMintBasisRaw": "10000000000000000000000",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791641283000,
+    "txHash": "0x98b55484550eb4f92edeb871f76512661a642d9185ce530b71857e6633c454e1",
+    "positionId": "35",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "827745",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "Liquidated",
+    "openedAtMs": 1791640804000,
+    "exitPriceRaw": "827255",
+    "adjustedPnlRaw": "-10000000000000000000000",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "1000000000000000000000000",
+    "paperMintBasisRaw": "10000000000000000000000",
+    "paperMintBatchTotalRaw": null
+   }
+  ],
+  "0x136c0c8bb7ac0ce10a5afd6697b958573bdcb806": [
+   {
+    "timestampMs": 1791658161000,
+    "txHash": "0x528772b0b618e8e7874e3f965958f9dcc1c9d5df27a2aad8bc64021163e05a88",
+    "positionId": "1572",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "249565",
+    "marginRaw": "299968700000000000000000",
+    "leverage": 33,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641395000,
+    "exitPriceRaw": "251135",
+    "adjustedPnlRaw": "53570567284127641290411",
+    "userPaidFeeRaw": "1071411345682552825808",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   }
+  ],
+  "0xcf803a49f6e37b92a4040e397b976939dc5d9841": [
+   {
+    "timestampMs": 1791660133000,
+    "txHash": "0x93c9bf7d2cbfea160e278d628515a2626df5f863328d7e8122a7982327503461",
+    "positionId": "40716",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829875",
+    "marginRaw": "50000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791658699000,
+    "exitPriceRaw": "829915",
+    "adjustedPnlRaw": "172370584750810448",
+    "userPaidFeeRaw": "3447411695016208",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791660132000,
+    "txHash": "0xf194e9f3eece716e81626b23894f2ae25d01c08e6350ae8502655c4af22393b4",
+    "positionId": "40717",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "829875",
+    "marginRaw": "50000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791658699000,
+    "exitPriceRaw": "829915",
+    "adjustedPnlRaw": "-2410001506250941406",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "121965808887082493899",
+    "paperMintBasisRaw": "2361801476125922578",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791658240000,
+    "txHash": "0x2d305806406d579f02d677af2e1fa6ad7b5d81151067bfe9b4ce6a022462da29",
+    "positionId": "36726",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "829775",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791657415000,
+    "exitPriceRaw": "830095",
+    "adjustedPnlRaw": "-3856467114579253412069",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "198732109525418619815571",
+    "paperMintBasisRaw": "3779337772287668343828",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791657189000,
+    "txHash": "0xd1a2212061d1349907c7bce8fb23513107db5f248cba4a7029b0d99a49dcd68b",
+    "positionId": "36003",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830155",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791657091000,
+    "exitPriceRaw": "829855",
+    "adjustedPnlRaw": "1981672553690414137648",
+    "userPaidFeeRaw": "39633451073808282752",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791657074000,
+    "txHash": "0x5b0a13d7f66cec41f4833a91c831c19d5b5f5a7d1aa046badab20dd4363702b2",
+    "positionId": "35294",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829435",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791656812000,
+    "exitPriceRaw": "830155",
+    "adjustedPnlRaw": "6245155823422124531903",
+    "userPaidFeeRaw": "124903116468442490638",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791656800000,
+    "txHash": "0xabbc1071a3b9f4abf9e09f525aac9ccf07f9c6b6ac8218f0a26794a0313a27c3",
+    "positionId": "34724",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830275",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791656421000,
+    "exitPriceRaw": "829435",
+    "adjustedPnlRaw": "7500387777250987115256",
+    "userPaidFeeRaw": "150007755545019742305",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791656602000,
+    "txHash": "0x652a27df524572562a7d821edcaec390f19b5425774f453cb9ad04cca66e0dd4",
+    "positionId": "34734",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830275",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791656427000,
+    "exitPriceRaw": "829945",
+    "adjustedPnlRaw": "2267797959117890289265",
+    "userPaidFeeRaw": "45355959182357805785",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791656358000,
+    "txHash": "0x8d5ee3b877e32fd385900403b590c1b8bd0a2e152fa7acec2527dd9457863d2a",
+    "positionId": "34277",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "830125",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791656100000,
+    "exitPriceRaw": "830275",
+    "adjustedPnlRaw": "668414740390494827019",
+    "userPaidFeeRaw": "13368294807809896540",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791655363000,
+    "txHash": "0xca257f4666bb875d859289c6a4dda9e519cf16ad69d7069dbe1f97f9d31cefbc",
+    "positionId": "31457",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830515",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791655305000,
+    "exitPriceRaw": "830295",
+    "adjustedPnlRaw": "1248134520437402315574",
+    "userPaidFeeRaw": "24962690408748046311",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791655178000,
+    "txHash": "0x95a59b7af211b34bf30905c61f172907c276fa9c2ed6169e9a438e3da5223f38",
+    "positionId": "30454",
+    "instrumentId": 1,
+    "symbol": "ETH",
+    "assetIndex": 1,
+    "priceScaleRaw": "100",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "250665",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791655009000,
+    "exitPriceRaw": "250635",
+    "adjustedPnlRaw": "239994225137374720244",
+    "userPaidFeeRaw": "4799884502747494404",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791654604000,
+    "txHash": "0x50f8ab5de4b6e08a88a0cd505bd205a29583da656ce665c5fa66793fe000c11e",
+    "positionId": "25422",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "830045",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791653022000,
+    "exitPriceRaw": "831095",
+    "adjustedPnlRaw": "9731625256018997213909",
+    "userPaidFeeRaw": "194632505120379944278",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791654550000,
+    "txHash": "0xbe9b121c686e5439d9def1cd85074d6f84637fd0ed0b9be4b166c7028d8bbdfe",
+    "positionId": "25402",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "830045",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791653017000,
+    "exitPriceRaw": "831265",
+    "adjustedPnlRaw": "11546796239289389099530",
+    "userPaidFeeRaw": "230935924785787781990",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791652640000,
+    "txHash": "0xe256be1a0b0631bbae721f18fe20eecfae5fe24d11df2c1c34c89b11826e4f40",
+    "positionId": "22686",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830285",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791651918000,
+    "exitPriceRaw": "830405",
+    "adjustedPnlRaw": "-1445286859331434386987",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "89864404116610149493477",
+    "paperMintBasisRaw": "1416381122144805699248",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791652640000,
+    "txHash": "0xd91f1ff690df6ad3a5efb77554ae1d458712159a1b9948ab085e88f7f5a0eda6",
+    "positionId": "22689",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830285",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791651922000,
+    "exitPriceRaw": "830405",
+    "adjustedPnlRaw": "-1445286859331434386987",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "89866093882299252750995",
+    "paperMintBasisRaw": "1416381122144805699248",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791652639000,
+    "txHash": "0xc5c975915e1e06bf4524579cb5879bc8260401762a836ff6d381410d0c7f2888",
+    "positionId": "22692",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830285",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791651924000,
+    "exitPriceRaw": "830405",
+    "adjustedPnlRaw": "-1445286859331434386987",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "89867783695649078070946",
+    "paperMintBasisRaw": "1416381122144805699248",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791651872000,
+    "txHash": "0xcca0e28c7bf4204b7568627bd9e5dc38a99e9d5e374ec6d66a8daa14f5fa4a21",
+    "positionId": "22595",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830195",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791651870000,
+    "exitPriceRaw": "830195",
+    "adjustedPnlRaw": "0",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791651704000,
+    "txHash": "0xde8f06b2b6556d1e5c9e682ec291f54e3e2dcc02cfb917da9f31e8ea35e78f02",
+    "positionId": "22377",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829745",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791651651000,
+    "exitPriceRaw": "829675",
+    "adjustedPnlRaw": "-843632682330113468595",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "53480761448818880780791",
+    "paperMintBasisRaw": "826760028683511199224",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791651385000,
+    "txHash": "0xb33ac66bf40936e6a2a91da8adf6fc3b189dc548224059ec424b1906c69bedb4",
+    "positionId": "19338",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829895",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791650019000,
+    "exitPriceRaw": "829805",
+    "adjustedPnlRaw": "-1084474541960127486007",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "70093868580516830257557",
+    "paperMintBasisRaw": "1062785051120924936287",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791651293000,
+    "txHash": "0x000ca8204985174a90f42fee81fb8293e4f0f427172b685617618f046416e257",
+    "positionId": "20094",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "830245",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791650542000,
+    "exitPriceRaw": "830005",
+    "adjustedPnlRaw": "-2890712982312449939475",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "187587690528817628029767",
+    "paperMintBasisRaw": "2832898722666200940686",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791649323000,
+    "txHash": "0x376153f8aa4c0473264fca02a6c1f6fa8def97df5a70694255098ea514fc8c1d",
+    "positionId": "15845",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829545",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791648575000,
+    "exitPriceRaw": "830135",
+    "adjustedPnlRaw": "4889078962284314255091",
+    "userPaidFeeRaw": "97781579245686285101",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791647019000,
+    "txHash": "0x7bc0ac4f1571d5d86944cebfd1013d9c9ae3d7e5f4d2ba5a7c54d2c3e774b4e1",
+    "positionId": "6411",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829365",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791645256000,
+    "exitPriceRaw": "829895",
+    "adjustedPnlRaw": "4272020699198991706281",
+    "userPaidFeeRaw": "85440413983979834125",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791645061000,
+    "txHash": "0x1d025625509ed33f72adace27e6d327b7fca4b4c5ef2d25b335a81ada9004ec8",
+    "positionId": "5689",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "829525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791644980000,
+    "exitPriceRaw": "829815",
+    "adjustedPnlRaw": "1889303710049915427623",
+    "userPaidFeeRaw": "37786074200998308552",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791644685000,
+    "txHash": "0xc75e0329e83734a78c437c2565ab9035cbfbec051eb1fadb496a0322930c90cc",
+    "positionId": "4081",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "829565",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791644211000,
+    "exitPriceRaw": "829925",
+    "adjustedPnlRaw": "-4339623778727405326888",
+    "userPaidFeeRaw": "0",
+    "paperMintedRaw": "386253151008980752841235",
+    "paperMintBasisRaw": "4252831303152857220351",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791643930000,
+    "txHash": "0xf4e8df2f8c555fca58103a752c25e42e20a5d87572eb2c5d2069c2d2548fe325",
+    "positionId": "3165",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "830305",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791643619000,
+    "exitPriceRaw": "829455",
+    "adjustedPnlRaw": "7605710663547510706330",
+    "userPaidFeeRaw": "152114213270950214126",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791642499000,
+    "txHash": "0x5e38481b656948cc4c6c9c8f6f09cf48174c7da7e0db81dd0492878bd8864d37",
+    "positionId": "2179",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": true,
+    "entryPriceRaw": "827625",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791642168000,
+    "exitPriceRaw": "828495",
+    "adjustedPnlRaw": "7846401091888063531067",
+    "userPaidFeeRaw": "156928021837761270621",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   },
+   {
+    "timestampMs": 1791641497000,
+    "txHash": "0x31bcd860b32013155e3dab443431a04f647764275472c9be19aa858fd7019e0e",
+    "positionId": "573",
+    "instrumentId": 0,
+    "symbol": "BTC",
+    "assetIndex": 0,
+    "priceScaleRaw": "10",
+    "terminal": false,
+    "retired": false,
+    "isLong": false,
+    "entryPriceRaw": "827525",
+    "marginRaw": "10000000000000000000000",
+    "leverage": 1000,
+    "kind": "PositionClosed",
+    "openedAtMs": 1791641050000,
+    "exitPriceRaw": "827495",
+    "adjustedPnlRaw": "12483701910841611286",
+    "userPaidFeeRaw": "249674038216832225",
+    "paperMintedRaw": "0",
+    "paperMintBasisRaw": "0",
+    "paperMintBatchTotalRaw": null
+   }
+  ]
+ }
+}

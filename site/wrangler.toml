@@ -1,0 +1,15 @@
+name = "papertrade-x402"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "public"
+
+# Prices are USDC per call. Change them here (or in the Pages dashboard) and redeploy; no code change needed.
+# Secrets and addresses are NOT stored here. Set X402_SOLANA_PAY_TO and X402_BASE_PAY_TO with
+#   npx wrangler pages secret put X402_SOLANA_PAY_TO
+[vars]
+PAPERTRADE_API_URL = "https://exchange.papertrade.xyz"
+X402_FACILITATOR_URL = "https://facilitator.payai.network"
+PRICE_WALLET_RISK = "0.02"
+PRICE_LIQUIDATIONS_NEARBY = "0.05"
+PRICE_ESTIMATE = "0.005"
+PRICE_TRADERS_TOP = "0.03"

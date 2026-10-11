@@ -1,0 +1,36 @@
+# papertrade-x402
+
+> Unofficial pay-per-call intelligence API over Papertrade (https://papertrade.xyz), the on-chain 1000x synthetic perps exchange on Hyperliquid HyperEVM. Agents pay per request in USDC with the x402 protocol, on Solana first or Base second. No API keys, no accounts. Not affiliated with Papertrade. High leverage can lose your whole margin.
+
+Base URL: https://papertrade-x402.pages.dev
+
+## Machine-readable descriptions
+
+- [OpenAPI 3.1](https://papertrade-x402.pages.dev/openapi.json): every route, parameters, response shapes and `x-payment-info` (price, networks).
+- [x402 discovery](https://papertrade-x402.pages.dev/.well-known/x402): resources, prices, accepted networks, payTo addresses and input examples.
+
+## Free endpoints
+
+- GET /api/v1/health: upstream status and payment configuration (503 when not configured).
+- GET /api/v1/markets: live Papertrade markets, mark prices and open interest.
+- GET /openapi.json, GET /.well-known/x402
+
+## Paid endpoints (USDC per call, prices set by the operator)
+
+- GET /api/v1/wallet/{address}/risk: liquidation risk for every open position of a HyperEVM wallet (default $0.02).
+- GET /api/v1/liquidations/nearby?market=BTC&pct=0.5: liquidation map within a percent window of mark (default $0.05).
+- POST /api/v1/estimate: close and bust-price estimate for a hypothetical position, body {market, side, marginUsd, leverage} (default $0.005).
+- GET /api/v1/traders/top?window=7d: leaderboard of top traders (default $0.03).
+
+## How to pay
+
+1. Call a paid route with no payment. The server answers HTTP 402 with a base64 `PAYMENT-REQUIRED` header listing `accepts` (Solana USDC first, Base USDC second).
+2. Sign one option with an x402 client (`@x402/fetch` `wrapFetchWithPayment`, or `PapertradeX402` from this package).
+3. Retry with a `PAYMENT-SIGNATURE` header. Payment is verified before the handler runs and settled only after a successful 2xx response. Invalid input (400) and upstream failures (502) are never charged.
+
+Use `dryRun: true` in the client to see the price and payTo without signing anything.
+
+## Source
+
+- https://github.com/nirholas/papertrade-x402
+- Related: papertrade-sdk, papertrade-ai (MCP), papertrade-terminal, papertrade-analytics, papertrade-explorer, papertrade-liquidations, papertrade-yield, papertrade-alerts, papertrade-copytrade (all under https://github.com/nirholas)

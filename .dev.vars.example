@@ -1,0 +1,20 @@
+# Copy to site/.dev.vars (next to wrangler.toml) for `wrangler pages dev`. In production set these with:
+#   npx wrangler pages secret put X402_SOLANA_PAY_TO
+#   npx wrangler pages secret put X402_BASE_PAY_TO
+#
+# Where paid calls are settled. Use addresses you control. At least one is required;
+# with neither set every paid endpoint answers 503 "not configured".
+
+# Solana address that receives USDC (base58). Primary network.
+X402_SOLANA_PAY_TO=
+
+# Base address that receives USDC (0x...). Secondary network.
+X402_BASE_PAY_TO=
+
+# Optional overrides (defaults shown, normally set in site/wrangler.toml):
+# X402_FACILITATOR_URL=https://facilitator.payai.network
+# PAPERTRADE_API_URL=https://exchange.papertrade.xyz
+# PRICE_WALLET_RISK=0.02
+# PRICE_LIQUIDATIONS_NEARBY=0.05
+# PRICE_ESTIMATE=0.005
+# PRICE_TRADERS_TOP=0.03

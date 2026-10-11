@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>papertrade-x402: pay-per-call Papertrade data for AI agents</title>
+  <meta name="description" content="Unofficial pay-per-call API over Papertrade perps on HyperEVM. Wallet liquidation risk, liquidation maps, settlement estimates and top-trader stats, paid per request in USDC with x402 on Solana or Base.">
+  <link rel="canonical" href="https://papertrade-x402.pages.dev/">
+  <meta property="og:title" content="papertrade-x402: pay-per-call Papertrade data for AI agents">
+  <meta property="og:description" content="Four paid endpoints, two free ones, USDC on Solana first. No keys, no accounts: an HTTP 402 and a signature.">
+  <meta property="og:url" content="https://papertrade-x402.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="color-scheme" content="dark light">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+  <link rel="alternate" type="application/json" href="/openapi.json" title="OpenAPI">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffb000'/%3E%3Cpath d='M8 11h16M8 16h16M8 21h9' stroke='%231a1206' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebAPI","name":"papertrade-x402","description":"Unofficial pay-per-call intelligence API over Papertrade perps, paid with x402 USDC on Solana or Base.","url":"https://papertrade-x402.pages.dev/","documentation":"https://papertrade-x402.pages.dev/openapi.json","provider":{"@type":"Person","name":"nirholas"},"license":"https://opensource.org/licenses/MIT"}
+  </script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>papertrade-x402</a>
+    <nav aria-label="Primary">
+      <a href="#catalog">Endpoints</a>
+      <a href="#try">Try the 402</a>
+      <a href="#client">Client</a>
+      <a href="#agents">Agents</a>
+      <a href="https://github.com/nirholas/papertrade-x402">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">x402 · USDC · Solana first</p>
+      <h1>Pay per call.<br>Papertrade intelligence for agents.</h1>
+      <p class="lede">Liquidation risk for any wallet, a live liquidation map, settlement estimates and top-trader stats, computed from live Papertrade data. No API keys and no accounts. Your agent gets an HTTP 402, signs a USDC payment, and gets the answer.</p>
+      <p class="disclaimer"><strong>Unofficial, not affiliated with Papertrade.</strong> High leverage can lose your whole margin. Nothing here is financial advice.</p>
+      <ul class="pills" aria-label="Service status">
+        <li class="pill" data-kind="wait" id="pill-api"><span class="dot"></span><span class="pill-text">Papertrade API: checking</span></li>
+        <li class="pill" data-kind="wait" id="pill-pay"><span class="dot"></span><span class="pill-text">Payments: checking</span></li>
+        <li class="pill" data-kind="wait" id="pill-sol"><span class="dot"></span><span class="pill-text">Solana USDC</span></li>
+        <li class="pill" data-kind="wait" id="pill-base"><span class="dot"></span><span class="pill-text">Base USDC</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="#try">Try an unpaid call</a>
+        <a class="btn" href="#client">Use the client</a>
+        <button id="retry-status" class="btn" type="button" hidden>Retry status</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="markets-h" class="block">
+      <div class="head"><h2 id="markets-h">Live markets <span class="free">free</span></h2><code>GET /api/v1/markets</code></div>
+      <div id="markets" class="markets" aria-live="polite" aria-busy="true">
+        <div class="card"><span class="skeleton wide"></span><span class="skeleton"></span></div>
+        <div class="card"><span class="skeleton wide"></span><span class="skeleton"></span></div>
+      </div>
+      <div id="markets-error" class="notice" role="alert" hidden>
+        <p id="markets-error-text"></p>
+        <button id="markets-retry" class="btn" type="button">Retry</button>
+      </div>
+    </section>
+
+    <section id="catalog" aria-labelledby="catalog-h" class="block">
+      <div class="head"><h2 id="catalog-h">Paid endpoints</h2><span class="muted">Priced in USDC per successful call. You are charged only when the answer is delivered.</span></div>
+      <div id="catalog-list" class="catalog" aria-live="polite" aria-busy="true">
+        <article class="card tall"><span class="skeleton wide"></span><span class="skeleton"></span><span class="skeleton"></span></article>
+        <article class="card tall"><span class="skeleton wide"></span><span class="skeleton"></span><span class="skeleton"></span></article>
+      </div>
+      <div id="catalog-error" class="notice" role="alert" hidden>
+        <p id="catalog-error-text"></p>
+        <button id="catalog-retry" class="btn" type="button">Retry</button>
+      </div>
+      <p id="not-configured" class="notice warn" role="status" hidden><strong>Not configured.</strong> This deployment has no payment address yet (<code>X402_SOLANA_PAY_TO</code> / <code>X402_BASE_PAY_TO</code>), so paid endpoints answer <code>503</code>. See the <a href="https://github.com/nirholas/papertrade-x402#environment-variables">environment variables</a>.</p>
+      <p class="muted small">Free: <a href="/api/v1/health">/api/v1/health</a>, <a href="/api/v1/markets">/api/v1/markets</a>, <a href="/openapi.json">/openapi.json</a>, <a href="/.well-known/x402">/.well-known/x402</a>.</p>
+    </section>
+
+    <section id="try" aria-labelledby="try-h" class="block">
+      <div class="head"><h2 id="try-h">See the 402 challenge</h2><span class="muted">Sends one request with no payment. Nothing is signed or charged.</span></div>
+      <form id="try-form" class="try" novalidate>
+        <div class="field">
+          <label for="try-endpoint">Endpoint</label>
+          <select id="try-endpoint" name="endpoint">
+            <option value="wallet-risk">GET /api/v1/wallet/{address}/risk</option>
+            <option value="liquidations-nearby">GET /api/v1/liquidations/nearby</option>
+            <option value="estimate">POST /api/v1/estimate</option>
+            <option value="traders-top">GET /api/v1/traders/top</option>
+          </select>
+        </div>
+        <div class="field" data-for="wallet-risk">
+          <label for="try-address">Wallet address</label>
+          <input id="try-address" name="address" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd" aria-describedby="try-address-hint">
+          <span id="try-address-hint" class="hint">A 0x HyperEVM address.</span>
+        </div>
+        <div class="field" data-for="liquidations-nearby estimate">
+          <label for="try-market">Market</label>
+          <select id="try-market" name="market"><option>BTC</option><option>ETH</option></select>
+        </div>
+        <div class="field" data-for="liquidations-nearby">
+          <label for="try-pct">Window (% of mark)</label>
+          <input id="try-pct" name="pct" type="number" step="any" min="0.01" max="25" value="0.5">
+        </div>
+        <div class="field" data-for="estimate">
+          <label for="try-side">Side</label>
+          <select id="try-side" name="side"><option>long</option><option>short</option></select>
+        </div>
+        <div class="field" data-for="estimate">
+          <label for="try-margin">Margin (USD)</label>
+          <input id="try-margin" name="marginUsd" type="number" step="any" min="10" value="100">
+        </div>
+        <div class="field" data-for="estimate">
+          <label for="try-leverage">Leverage</label>
+          <input id="try-leverage" name="leverage" type="number" step="1" min="1" max="1000" value="100">
+        </div>
+        <div class="field" data-for="traders-top">
+          <label for="try-window">Window</label>
+          <select id="try-window" name="window"><option>24h</option><option selected>7d</option><option>30d</option><option>all</option></select>
+        </div>
+        <div class="field actions">
+          <button id="try-send" class="btn primary" type="submit">Send unpaid request</button>
+        </div>
+      </form>
+      <div id="try-result" class="result" aria-live="polite" hidden>
+        <div class="result-head"><span id="try-status" class="status-chip"></span><code id="try-line"></code></div>
+        <p id="try-note" class="muted"></p>
+        <div id="try-accepts" class="accepts"></div>
+        <details><summary>Decoded PAYMENT-REQUIRED header</summary><pre><code id="try-json"></code></pre></details>
+        <button id="try-retry" class="btn" type="button" hidden>Retry</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="curl-h" class="block">
+      <div class="head"><h2 id="curl-h">curl</h2><span class="muted">Every paid route answers an unpaid request with a spec-correct 402.</span></div>
+      <div class="code">
+        <button class="copy" type="button" data-copy="curl-code" aria-label="Copy curl example">Copy</button>
+<pre><code id="curl-code">curl -i https://papertrade-x402.pages.dev/api/v1/wallet/0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd/risk
+
+# HTTP/2 402
+# payment-required: eyJ4NDAyVmVyc2lvbiI6Mi4uLg==   (base64 JSON: x402Version, accepts[], resource)
+
+# Decode the challenge
+curl -si https://papertrade-x402.pages.dev/api/v1/liquidations/nearby?market=BTC\&amp;pct=0.5 \
+  | grep -i '^payment-required:' | cut -d' ' -f2 | base64 -d | jq '.accepts[] | {network, amount, payTo}'
+
+# POST route
+curl -i -X POST https://papertrade-x402.pages.dev/api/v1/estimate \
+  -H 'content-type: application/json' \
+  -d '{"market":"BTC","side":"long","marginUsd":100,"leverage":100,"exitMovePct":-0.5}'</code></pre>
+      </div>
+    </section>
+
+    <section id="client" aria-labelledby="client-h" class="block">
+      <div class="head"><h2 id="client-h">TypeScript client</h2><span class="muted">Example. You supply the signer; keys never leave your process.</span></div>
+      <div class="two">
+        <div class="code">
+          <span class="code-title">Official x402 fetch wrapper with a Solana signer</span>
+          <button class="copy" type="button" data-copy="ts-fetch" aria-label="Copy fetch wrapper example">Copy</button>
+<pre><code id="ts-fetch">import { x402Client, wrapFetchWithPayment } from '@x402/fetch';
+import { registerExactSvmScheme } from '@x402/svm/exact/client';
+import { createKeyPairSignerFromBytes } from '@solana/kit';
+import { base58 } from '@scure/base';
+
+// Your own key, from your own secret store.
+const signer = await createKeyPairSignerFromBytes(
+  base58.decode(process.env.SOLANA_PRIVATE_KEY!),
+);
+
+const client = new x402Client();
+registerExactSvmScheme(client, { signer });
+const payFetch = wrapFetchWithPayment(fetch, client);
+
+const res = await payFetch(
+  'https://papertrade-x402.pages.dev/api/v1/wallet/0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd/risk',
+);
+console.log(await res.json());</code></pre>
+        </div>
+        <div class="code">
+          <span class="code-title">papertrade-x402 helper, with a dry run</span>
+          <button class="copy" type="button" data-copy="ts-helper" aria-label="Copy helper example">Copy</button>
+<pre><code id="ts-helper">import { PapertradeX402 } from 'papertrade-x402';
+
+// Dry run: prints requirements, signs and pays nothing.
+const preview = new PapertradeX402({ dryRun: true });
+console.log(await preview.liquidationsNearby({ market: 'BTC', pct: 0.5 }));
+
+// Live: pay with your signer, refuse anything above 0.10 USDC.
+const api = new PapertradeX402({ svmSigner: signer, maxPriceUsdc: 0.1 });
+const { data, receipt } = await api.tradersTop({ window: '7d' });</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="agents" aria-labelledby="agents-h" class="block">
+      <div class="head"><h2 id="agents-h">Agent quick start</h2></div>
+      <ol class="steps">
+        <li><strong>Discover.</strong> Fetch <a href="/.well-known/x402"><code>/.well-known/x402</code></a> or <a href="/openapi.json"><code>/openapi.json</code></a> for prices, networks, payTo and input/output schemas.</li>
+        <li><strong>Call.</strong> Request any paid route. You get <code>402</code> and a base64 <code>PAYMENT-REQUIRED</code> header listing Solana USDC first, then Base USDC.</li>
+        <li><strong>Pay.</strong> Sign the matching option and retry with the <code>PAYMENT-SIGNATURE</code> header. The x402 fetch wrapper does both steps for you.</li>
+        <li><strong>Receive.</strong> The facilitator verifies before the handler runs and settles only after a successful response. Errors (<code>400</code>, <code>502</code>) are never charged. The receipt is in <code>PAYMENT-RESPONSE</code>.</li>
+        <li><strong>Pair it.</strong> Use <a href="https://github.com/nirholas/papertrade-ai">papertrade-ai</a> (MCP server and CLI) for the trading side and this API for paid intelligence.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="disclaimer"><strong>Unofficial, not affiliated with Papertrade.</strong> High leverage can lose your whole margin. Data is read live from the public Papertrade API and may be delayed or unavailable.</p>
+    <nav aria-label="Related projects" class="related">
+      <span>Related:</span>
+      <a href="https://github.com/nirholas/papertrade-sdk">sdk</a>
+      <a href="https://github.com/nirholas/papertrade-ai">ai</a>
+      <a href="https://papertrade-terminal.pages.dev">terminal</a>
+      <a href="https://papertrade-analytics.pages.dev">analytics</a>
+      <a href="https://papertrade-explorer.pages.dev">explorer</a>
+      <a href="https://papertrade-liquidations.pages.dev">liquidations</a>
+      <a href="https://papertrade-yield.pages.dev">yield</a>
+      <a href="https://github.com/nirholas/papertrade-alerts">alerts</a>
+      <a href="https://papertrade-copytrade.pages.dev">copytrade</a>
+    </nav>
+    <p class="muted small">MIT · <a href="https://github.com/nirholas/papertrade-x402">github.com/nirholas/papertrade-x402</a> · <a href="/llms.txt">llms.txt</a></p>
+  </footer>
+</body>
+</html>

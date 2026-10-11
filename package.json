@@ -1,0 +1,80 @@
+{
+  "name": "papertrade-x402",
+  "version": "0.1.0",
+  "description": "Unofficial pay-per-call Papertrade intelligence API for AI agents over the x402 protocol: wallet liquidation risk, liquidation maps, settlement estimates and top-trader stats, paid in USDC on Solana (first) or Base. Includes a typed x402 client.",
+  "license": "MIT",
+  "author": "nirholas",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/client.js",
+  "module": "./dist/client.js",
+  "types": "./dist/client.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit && tsc --noEmit -p site/functions",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "build:site": "esbuild site/app.ts --bundle --format=esm --minify --target=es2022 --sourcemap --outfile=site/public/app.js",
+    "dev:site": "npm run build:site && cd site && wrangler pages dev --port 8793",
+    "deploy:site": "npm run build:site && cd site && wrangler pages deploy",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "papertrade",
+    "x402",
+    "http-402",
+    "solana",
+    "usdc",
+    "hyperliquid",
+    "hyperevm",
+    "perps",
+    "ai-agents",
+    "pay-per-call"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirholas/papertrade-x402.git"
+  },
+  "homepage": "https://github.com/nirholas/papertrade-x402#readme",
+  "bugs": {
+    "url": "https://github.com/nirholas/papertrade-x402/issues"
+  },
+  "dependencies": {
+    "@solana/kit": "^5.5.1",
+    "@x402/core": "^2.28.0",
+    "@x402/evm": "^2.28.0",
+    "@x402/extensions": "^2.28.0",
+    "@x402/fetch": "^2.28.0",
+    "@x402/hono": "^2.28.0",
+    "@x402/svm": "^2.28.0",
+    "hono": "^4.13.13",
+    "papertrade-sdk": "file:../papertrade-sdk-0.1.0.tgz",
+    "viem": "^2.57.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261010.1",
+    "@types/node": "^22.20.5",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.149.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261006.1": true,
+    "esbuild@0.28.2": true
+  }
+}
