@@ -72,7 +72,7 @@
     "@x402/hono": "^2.28.0",
     "@x402/svm": "^2.28.0",
     "hono": "^4.13.13",
-    "papertrade-sdk": "file:../papertrade-sdk-0.1.0.tgz",
+    "papertrade-sdk": "github:nirholas/papertrade-sdk",
     "viem": "^2.57.4"
   },
   "devDependencies": {
