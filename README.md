@@ -5,15 +5,17 @@
 [![HyperEVM](https://img.shields.io/badge/HyperEVM-chain_999-0a8f5b?style=flat-square)](https://papertrade.xyz)
 [![GitHub stars](https://img.shields.io/github/stars/nirholas/papertrade-x402?style=flat-square&color=0a8f5b)](https://github.com/nirholas/papertrade-x402/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/nirholas/papertrade-x402?style=flat-square&color=0a8f5b)](https://github.com/nirholas/papertrade-x402/commits/main)
+[![MCP](https://img.shields.io/badge/MCP-streamable_http-0a8f5b?style=flat-square)](https://papertrade-x402.pages.dev/docs/mcp/)
+[![x402](https://img.shields.io/badge/x402-v2_bazaar-0a8f5b?style=flat-square)](https://papertrade-x402.pages.dev/.well-known/x402)
 [![Unofficial](https://img.shields.io/badge/community-unofficial-lightgrey?style=flat-square)](#the-papertrade-toolkit)
 
-[Live site](https://papertrade-x402.pages.dev) · [Issues](https://github.com/nirholas/papertrade-x402/issues) · [Discussions](https://github.com/nirholas/papertrade-x402/discussions) · [Papertrade](https://papertrade.xyz) · [Toolkit](#the-papertrade-toolkit)
+[Live site](https://papertrade-x402.pages.dev) · [Docs](https://papertrade-x402.pages.dev/docs/) · [MCP](https://papertrade-x402.pages.dev/mcp) · [llms.txt](https://papertrade-x402.pages.dev/llms.txt) · [Issues](https://github.com/nirholas/papertrade-x402/issues) · [Discussions](https://github.com/nirholas/papertrade-x402/discussions) · [Papertrade](https://papertrade.xyz) · [Toolkit](#the-papertrade-toolkit)
 
 **Unofficial** pay-per-call intelligence API over [Papertrade](https://papertrade.xyz) (the fully on-chain 1000x synthetic perps exchange on Hyperliquid HyperEVM), built for AI agents. Each request is paid in USDC with the [x402](https://x402.org) protocol, on **Solana first** and **Base second**, through the PayAI facilitator. No API keys, no accounts, no subscriptions: an HTTP 402 and a signature.
 
 > Unofficial, not affiliated with Papertrade. High leverage can lose your whole margin. Nothing here is financial advice.
 
-Live site (after you deploy): https://papertrade-x402.pages.dev
+Live: https://papertrade-x402.pages.dev (docs at `/docs/`, MCP at `/mcp`).
 
 ## Why
 
@@ -62,6 +64,36 @@ Or use the bundled client, which has a dry run that signs and pays nothing:
 import { PapertradeX402 } from 'papertrade-x402';
 const preview = await new PapertradeX402({ dryRun: true }).walletRisk('0x...');
 ```
+
+## Free preview and MCP
+
+Every paid route has a rate limited free preview under `/api/v1/preview/*` that runs the same live computation and withholds detail. Until the operator sets a payout address, paid routes answer an explanatory `503` that links to the free tier.
+
+The read-only MCP server at `https://papertrade-x402.pages.dev/mcp` (Streamable HTTP, stateless, no auth) exposes six free tools and four paid tools. Paid tools return the x402 payment requirements and never pay: an agent pays over HTTP with its own wallet.
+
+```bash
+claude mcp add --transport http papertrade-x402 https://papertrade-x402.pages.dev/mcp
+codex mcp add papertrade-x402 --url https://papertrade-x402.pages.dev/mcp
+npx @modelcontextprotocol/inspector --cli https://papertrade-x402.pages.dev/mcp --transport http --method tools/list
+```
+
+Setup for Claude Desktop, claude.ai, ChatGPT, Gemini CLI, Cursor, VS Code, Windsurf, Zed, Cline, Goose, Continue and the Claude and OpenAI APIs is in [docs/connect-your-ai.md](docs/connect-your-ai.md).
+
+Discovery files: `/.well-known/x402`, `/.well-known/mcp/server-card.json`, `/.well-known/agent-card.json`, `/.well-known/api-catalog`, `/openapi.json`, `/llms.txt`, `/llms-full.txt`. Registry manifest: `server.json` (`io.github.nirholas/papertrade-x402`).
+
+## Documentation
+
+Markdown sources are in [`docs/`](docs/) and `npm run build:site` renders them to `/docs/` with search, `.md` twins and `llms-full.txt`. Start with [overview](docs/overview.md), [MCP](docs/mcp.md) and [paying as an agent](docs/paying-as-an-agent.md).
+
+## Enable payments
+
+Paid routes need a payout address you choose. From `site/`, one command, then redeploy:
+
+```bash
+npx wrangler pages secret put X402_SOLANA_PAY_TO
+```
+
+Details in [docs/self-hosting.md](docs/self-hosting.md).
 
 ## Architecture
 
