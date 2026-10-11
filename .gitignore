@@ -6,3 +6,5 @@ dist
 .wrangler
 site/public/app.js*
 .gen.tmp.mjs
+site/public/docs/
+site/public/llms-full.txt

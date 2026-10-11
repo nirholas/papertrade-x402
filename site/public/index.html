@@ -93,7 +93,7 @@
         </div>
         <div class="field" data-for="wallet-risk">
           <label for="try-address">Wallet address</label>
-          <input id="try-address" name="address" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd" aria-describedby="try-address-hint">
+          <input id="try-address" name="address" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="0x3f139ef9f371fbbfc299aa65b93534e177141b18" aria-describedby="try-address-hint">
           <span id="try-address-hint" class="hint">A 0x HyperEVM address.</span>
         </div>
         <div class="field" data-for="liquidations-nearby estimate">
@@ -137,7 +137,7 @@
       <div class="head"><h2 id="curl-h">curl</h2><span class="muted">Every paid route answers an unpaid request with a spec-correct 402.</span></div>
       <div class="code">
         <button class="copy" type="button" data-copy="curl-code" aria-label="Copy curl example">Copy</button>
-<pre><code id="curl-code">curl -i https://papertrade-x402.pages.dev/api/v1/wallet/0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd/risk
+<pre><code id="curl-code">curl -i https://papertrade-x402.pages.dev/api/v1/wallet/0x3f139ef9f371fbbfc299aa65b93534e177141b18/risk
 
 # HTTP/2 402
 # payment-required: eyJ4NDAyVmVyc2lvbiI6Mi4uLg==   (base64 JSON: x402Version, accepts[], resource)
@@ -174,7 +174,7 @@ registerExactSvmScheme(client, { signer });
 const payFetch = wrapFetchWithPayment(fetch, client);
 
 const res = await payFetch(
-  'https://papertrade-x402.pages.dev/api/v1/wallet/0xd848e18c3271f178ad709c4f3e4fa3ded304f4dd/risk',
+  'https://papertrade-x402.pages.dev/api/v1/wallet/0x3f139ef9f371fbbfc299aa65b93534e177141b18/risk',
 );
 console.log(await res.json());</code></pre>
         </div>

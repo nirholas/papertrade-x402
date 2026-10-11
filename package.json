@@ -28,10 +28,13 @@
     "typecheck": "tsc --noEmit && tsc --noEmit -p site/functions",
     "test": "vitest run",
     "build": "tsc -p tsconfig.build.json",
-    "build:site": "esbuild site/app.ts --bundle --format=esm --minify --target=es2022 --sourcemap --outfile=site/public/app.js",
+    "build:site": "npm run build:app && npm run build:docs",
     "dev:site": "npm run build:site && cd site && wrangler pages dev --port 8793",
     "deploy:site": "npm run build:site && cd site && wrangler pages deploy",
-    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "build:docs": "node scripts/build-docs.mjs",
+    "build:app": "esbuild site/app.ts --bundle --format=esm --minify --target=es2022 --sourcemap --outfile=site/public/app.js",
+    "gen:examples": "esbuild scripts/gen-examples.ts --bundle --platform=node --format=esm --outfile=test/.gen.tmp.mjs --banner:js=\"import {createRequire} from 'module';const require=createRequire(import.meta.url);\" && node test/.gen.tmp.mjs; rm -f test/.gen.tmp.mjs"
   },
   "keywords": [
     "papertrade",
@@ -53,7 +56,16 @@
     "cloudflare-pages",
     "crypto",
     "web3",
-    "agentic-commerce"
+    "agentic-commerce",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "x402-bazaar",
+    "llms-txt",
+    "agent-card",
+    "a2a",
+    "claude",
+    "codex"
   ],
   "repository": {
     "type": "git",
@@ -87,5 +99,6 @@
   "allowScripts": {
     "workerd@1.20261006.1": true,
     "esbuild@0.28.2": true
-  }
+  },
+  "mcpName": "io.github.nirholas/papertrade-x402"
 }

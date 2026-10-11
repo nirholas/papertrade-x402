@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://papertrade-x402.pages.dev/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://papertrade-x402.pages.dev/openapi.json</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://papertrade-x402.pages.dev/.well-known/x402</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://papertrade-x402.pages.dev/llms.txt</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/overview/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/quickstart/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/concepts/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/api-reference/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/mcp/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/connect-your-ai/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/agent-discovery/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/paying-as-an-agent/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/self-hosting/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/security-and-limits/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/faq/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/docs/changelog/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/openapi.json</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/.well-known/x402</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/.well-known/mcp/server-card.json</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/.well-known/agent-card.json</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/.well-known/api-catalog</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/llms.txt</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://papertrade-x402.pages.dev/llms-full.txt</loc><lastmod>2026-10-11</lastmod></url>
 </urlset>

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.nirholas/papertrade-x402",
+  "title": "Papertrade x402",
+  "description": "Unofficial read-only Papertrade perps intelligence over x402: wallet liquidation risk, liquidation maps, estimates and top traders. Free previews; paid tools return x402 requirements.",
+  "version": "0.1.0",
+  "websiteUrl": "https://papertrade-x402.pages.dev/docs/",
+  "repository": { "url": "https://github.com/nirholas/papertrade-x402", "source": "github" },
+  "remotes": [{ "type": "streamable-http", "url": "https://papertrade-x402.pages.dev/mcp" }]
+}

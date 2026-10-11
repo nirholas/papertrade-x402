@@ -1,36 +1,55 @@
 # papertrade-x402
 
-> Unofficial pay-per-call intelligence API over Papertrade (https://papertrade.xyz), the on-chain 1000x synthetic perps exchange on Hyperliquid HyperEVM. Agents pay per request in USDC with the x402 protocol, on Solana first or Base second. No API keys, no accounts. Not affiliated with Papertrade. High leverage can lose your whole margin.
+> Unofficial pay-per-call intelligence API over Papertrade (https://papertrade.xyz), the on-chain 1000x synthetic perps exchange on Hyperliquid HyperEVM. Agents pay per request in USDC with the x402 protocol, on Solana first or Base second. No API keys, no accounts. Free preview tier and a read-only MCP server. Not affiliated with Papertrade. High leverage can lose your whole margin.
 
 Base URL: https://papertrade-x402.pages.dev
 
 ## Machine-readable descriptions
 
-- [OpenAPI 3.1](https://papertrade-x402.pages.dev/openapi.json): every route, parameters, response shapes and `x-payment-info` (price, networks).
-- [x402 discovery](https://papertrade-x402.pages.dev/.well-known/x402): resources, prices, accepted networks, payTo addresses and input examples.
+- [MCP server (Streamable HTTP)](https://papertrade-x402.pages.dev/mcp): ten read-only tools. Free tools return data, paid tools return x402 payment requirements and never pay.
+- [OpenAPI 3.1](https://papertrade-x402.pages.dev/openapi.json): every route, parameters, response shapes and `x-payment-info`.
+- [x402 discovery](https://papertrade-x402.pages.dev/.well-known/x402): resources, prices, accepted networks, payTo, input and output schemas, status.
+- [MCP server card](https://papertrade-x402.pages.dev/.well-known/mcp/server-card.json)
+- [A2A agent card](https://papertrade-x402.pages.dev/.well-known/agent-card.json)
+- [API catalog (RFC 9727)](https://papertrade-x402.pages.dev/.well-known/api-catalog)
+- [Full documentation in one file](https://papertrade-x402.pages.dev/llms-full.txt)
+
+## Docs
+
+- [Overview](https://papertrade-x402.pages.dev/docs/overview.md): What papertrade-x402 is, what it sells, and how an agent or a person uses it.
+- [Quickstart](https://papertrade-x402.pages.dev/docs/quickstart.md): Make your first free call, see the real 402 challenge, then connect an AI client.
+- [Concepts](https://papertrade-x402.pages.dev/docs/concepts.md): The Papertrade rules and the x402 flow that give every number in the API its meaning.
+- [API reference](https://papertrade-x402.pages.dev/docs/api-reference.md): Every route, its parameters, its response shape, and the free preview that mirrors it.
+- [MCP server](https://papertrade-x402.pages.dev/docs/mcp.md): The Model Context Protocol endpoint, its ten tools with schemas, and example calls.
+- [Connect your AI](https://papertrade-x402.pages.dev/docs/connect-your-ai.md): Copy-paste setup for Claude, Codex, ChatGPT, Gemini, Cursor, VS Code, Windsurf, Zed, Cline, Goose and Continue.
+- [Agent discovery](https://papertrade-x402.pages.dev/docs/agent-discovery.md): Every machine-readable file the service publishes so agents and crawlers can find and understand it.
+- [Paying as an agent](https://papertrade-x402.pages.dev/docs/paying-as-an-agent.md): How an agent that holds its own wallet pays a paid route with x402, on Solana or Base.
+- [Self-hosting](https://papertrade-x402.pages.dev/docs/self-hosting.md): Deploy your own instance on Cloudflare Pages and set the payout address secret.
+- [Security and limits](https://papertrade-x402.pages.dev/docs/security-and-limits.md): What the service can and cannot do with money, how it limits abuse, and how to report a problem.
+- [FAQ](https://papertrade-x402.pages.dev/docs/faq.md): Short answers to the questions agents and developers ask first.
+- [Changelog](https://papertrade-x402.pages.dev/docs/changelog.md): Release history of papertrade-x402.
 
 ## Free endpoints
 
-- GET /api/v1/health: upstream status and payment configuration (503 when not configured).
+- GET /api/v1/health: upstream status and payment configuration.
 - GET /api/v1/markets: live Papertrade markets, mark prices and open interest.
-- GET /openapi.json, GET /.well-known/x402
+- GET /api/v1/preview/wallet/{address}/risk, GET /api/v1/preview/liquidations/nearby, POST /api/v1/preview/estimate, GET /api/v1/preview/traders/top: rate limited free previews of each paid route.
 
 ## Paid endpoints (USDC per call, prices set by the operator)
 
 - GET /api/v1/wallet/{address}/risk: liquidation risk for every open position of a HyperEVM wallet (default $0.02).
 - GET /api/v1/liquidations/nearby?market=BTC&pct=0.5: liquidation map within a percent window of mark (default $0.05).
-- POST /api/v1/estimate: close and bust-price estimate for a hypothetical position, body {market, side, marginUsd, leverage} (default $0.005).
-- GET /api/v1/traders/top?window=7d: leaderboard of top traders (default $0.03).
+- POST /api/v1/estimate: close and bust estimate for a hypothetical position (default $0.005).
+- GET /api/v1/traders/top?window=7d: leaderboard of top traders with derived stats (default $0.03).
 
 ## How to pay
 
 1. Call a paid route with no payment. The server answers HTTP 402 with a base64 `PAYMENT-REQUIRED` header listing `accepts` (Solana USDC first, Base USDC second).
-2. Sign one option with an x402 client (`@x402/fetch` `wrapFetchWithPayment`, or `PapertradeX402` from this package).
-3. Retry with a `PAYMENT-SIGNATURE` header. Payment is verified before the handler runs and settled only after a successful 2xx response. Invalid input (400) and upstream failures (502) are never charged.
+2. Sign one option with an x402 client using your own wallet.
+3. Retry with a `PAYMENT-SIGNATURE` header. Settlement happens only after a successful 2xx. Invalid input (400), unconfigured service (503) and upstream failures (502) are never charged.
 
-Use `dryRun: true` in the client to see the price and payTo without signing anything.
+If the operator has not set a payout address yet, paid routes answer 503 with an explanation and `status` in the discovery document is `payments_not_configured`. Use the free tier until it changes.
 
 ## Source
 
-- https://github.com/nirholas/papertrade-x402
-- Related: papertrade-sdk, papertrade-ai (MCP), papertrade-terminal, papertrade-analytics, papertrade-explorer, papertrade-liquidations, papertrade-yield, papertrade-alerts, papertrade-copytrade (all under https://github.com/nirholas)
+- https://github.com/nirholas/papertrade-x402 (Apache-2.0)
