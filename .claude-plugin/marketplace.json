@@ -7,8 +7,9 @@
   "plugins": [
     {
       "name": "papertrade-x402",
-      "source": "./",
+      "source": "./plugins/papertrade-x402",
       "description": "Papertrade liquidation risk and settlement intelligence for agents, free MCP previews plus paid x402 endpoints in USDC.",
+      "category": "development",
       "tags": [
         "mcp",
         "x402",
