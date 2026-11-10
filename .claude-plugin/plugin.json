@@ -1,0 +1,18 @@
+{
+  "name": "papertrade-x402",
+  "version": "0.1.0",
+  "description": "Papertrade liquidation risk and settlement intelligence for agents, free MCP previews plus paid x402 endpoints in USDC.",
+  "author": {
+    "name": "nirholas"
+  },
+  "repository": "https://github.com/nirholas/papertrade-x402",
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "x402",
+    "papertrade",
+    "hyperevm",
+    "perps"
+  ],
+  "homepage": "https://papertrade-x402.pages.dev"
+}

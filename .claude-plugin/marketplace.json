@@ -1,0 +1,20 @@
+{
+  "name": "papertrade-x402",
+  "owner": {
+    "name": "nirholas"
+  },
+  "description": "Papertrade liquidation risk and settlement intelligence for agents, free MCP previews plus paid x402 endpoints in USDC.",
+  "plugins": [
+    {
+      "name": "papertrade-x402",
+      "source": "./",
+      "description": "Papertrade liquidation risk and settlement intelligence for agents, free MCP previews plus paid x402 endpoints in USDC.",
+      "tags": [
+        "mcp",
+        "x402",
+        "perps",
+        "hyperevm"
+      ]
+    }
+  ]
+}
